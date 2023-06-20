@@ -1,0 +1,1408 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kranky&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap");
+/*****   TAG FONT   *****/
+/*****   TAG COLOR   *****/
+/*****   TAG PRE_HEADER   *****/
+/*****   TAG MENU AND LOGO   *****/
+/*****   TAG SIZE DEKSTOP   *****/
+/*****   TAG SIZE TABLETTE   *****/
+/*****   TAG SIZE PHONE   *****/
+/*****   UTILITY/ BUTTON-TITLE   *****/
+.button-title-alignement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+/*****   UTILITY/ FOOTER (ICONES-PARTENAIRES)   *****/
+.size1 {
+  max-width: 65px;
+  height: 65px;
+}
+
+.size2 {
+  max-width: 100px;
+  height: 65px;
+}
+
+.size3 {
+  max-width: 100px;
+  height: 85px;
+}
+
+.size4 {
+  max-width: 65px;
+  height: 55px;
+}
+
+.size5 {
+  max-width: 100px;
+  height: 35px;
+}
+
+.size6 {
+  max-width: 60px;
+  height: 80px;
+}
+
+/*****BASE*****/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  padding-top: 176px;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+@media (max-width: 393px) {
+  body {
+    padding-top: 145px;
+  }
+}
+
+.slide {
+  max-width: 100%;
+  /* Pour permettre de déduire la "height" de "pre_header" et de "header", body commence en-dessous de ces 2 éléments */
+  min-height: calc(100vh - 175px);
+  overflow-y: hidden;
+}
+@media (max-width: 393px) {
+  .slide {
+    min-height: calc(100vh - 145px);
+  }
+}
+
+.wrapper {
+  max-width: 1620px;
+  margin: 0 auto;
+}
+
+/* Code inspiration bootstrap */
+/* https://stackoverflow.com/questions/19758598/what-is-sr-only-in-bootstrap-3 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/*****   MENU   *****/
+#pre-header {
+  top: 0;
+  right: 0;
+  width: 100%;
+  position: fixed;
+  height: 50px;
+  background-color: #B0C96D;
+  z-index: 50;
+}
+#pre-header ul {
+  max-width: 100%;
+  height: 50px;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+#pre-header ul li a {
+  font-size: 20px;
+  padding: 7px;
+  font-family: "Acme", sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+#pre-header ul li a svg {
+  width: 25px;
+}
+#pre-header ul li a:hover {
+  font-size: 25px;
+}
+#pre-header ul li a:hover svg {
+  width: 30px;
+}
+@media (max-width: 393px) {
+  #pre-header ul li#pre-header-alignement {
+    margin-left: auto;
+  }
+}
+#pre-header .link-3 {
+  padding-right: 37px;
+}
+#pre-header .link-5 {
+  padding-right: 17px;
+}
+#pre-header .link-5:hover {
+  width: 30px;
+}
+
+header {
+  top: 50px;
+  right: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  border: solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+@media (max-width: 833px) {
+  header {
+    height: 95px;
+    border: none;
+  }
+}
+
+.logo {
+  margin: auto;
+}
+@media (max-width: 833px) {
+  .logo {
+    max-width: 95px;
+    margin: 0;
+  }
+}
+@media (max-width: 393px) {
+  .logo {
+    max-width: 95px;
+  }
+}
+
+/*****   MENU BURGER  *****/
+.burger {
+  width: 60px;
+  height: 24px;
+  cursor: pointer;
+  align-self: center;
+  margin: 0 25px;
+}
+@media (min-width: 834px) {
+  .burger {
+    display: none;
+  }
+}
+.burger span {
+  width: 100%;
+  height: 10px;
+  background-color: #161581;
+  border-radius: 12px;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.15s ease-in-out;
+}
+.burger span::before, .burger span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background-color: #161581;
+  transition: transform 0.15s ease-in-out;
+  /* Transition ease-in-out à un démarrage et une fin lente */
+}
+.burger span::before {
+  transform: translateY(-20px);
+  border-radius: 12px;
+}
+.burger span::after {
+  transform: translateY(20px);
+  border-radius: 12px;
+}
+.burger.active span {
+  background-color: transparent;
+}
+.burger.active span::before {
+  transform: translateY(0px) rotateZ(45deg);
+}
+.burger.active span::after {
+  transform: translateY(0px) rotateZ(-45deg);
+}
+
+/*****   FIN MENU BURGER  *****/
+nav {
+  top: 50px;
+  width: 100%;
+  height: 120px;
+}
+@media (max-width: 833px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #161581;
+    height: calc(100vh - 145px);
+    overflow-y: auto;
+    z-index: 15000;
+  }
+  nav.active {
+    display: block;
+  }
+}
+nav ul {
+  max-width: 100%;
+  height: 120px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+}
+@media (max-width: 1100px) {
+  nav ul {
+    justify-content: center;
+  }
+}
+@media (max-width: 833px) {
+  nav ul {
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    height: 100%;
+  }
+}
+nav ul li {
+  width: 200px;
+  height: 120px;
+  text-align: center;
+}
+@media (max-width: 1450px) {
+  nav ul li {
+    width: 150px;
+  }
+}
+@media (max-width: 1100px) {
+  nav ul li {
+    width: 126px;
+  }
+}
+@media (max-width: 900px) {
+  nav ul li {
+    width: 115px;
+  }
+}
+@media (max-width: 833px) {
+  nav ul li {
+    width: 100%;
+    border: 1px solid #ffffff;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 833px) {
+  nav ul li.active, nav ul li:hover {
+    background-color: #ffffff;
+    border: 1px solid #161581;
+  }
+}
+nav ul li.active a, nav ul li:hover a {
+  max-width: 100%;
+  height: 100%;
+  background-image: url(images/underline.png);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  transition: all 0.2s;
+}
+@media (max-width: 833px) {
+  nav ul li.active a, nav ul li:hover a {
+    color: #161581;
+    max-width: 300px;
+    height: 100px;
+    max-width: 100%;
+    height: 100%;
+    background-image: url(images/underline2.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-color: #ffffff;
+    color: #161581;
+  }
+}
+nav ul li a {
+  width: 200px;
+  line-height: 120px;
+  color: #D04264;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Acme", sans-serif;
+  padding: 20px;
+  background-position: center bottom;
+}
+@media (max-width: 1450px) {
+  nav ul li a {
+    width: 150px;
+    font-size: 27px;
+  }
+}
+@media (max-width: 1100px) {
+  nav ul li a {
+    width: 120px;
+    font-size: 23px;
+  }
+}
+@media (max-width: 900px) {
+  nav ul li a {
+    width: 120px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 833px) {
+  nav ul li a {
+    line-height: 75px;
+    color: #ffffff;
+    background-position: center 80%;
+  }
+}
+
+/*****HOME*****/
+#home {
+  width: 100%;
+  background-image: url(images/Image2_fond_transparent.png), url(images/notes-musique-pour-conception-illustration-vectorielle-votre-projetxaxa_460848-118341.png);
+  background-repeat: no-repeat;
+  background-position: bottom left, top right;
+}
+@media (max-width: 1450px) {
+  #home {
+    background-size: 65%, 55%;
+    background-position-y: bottom, top right;
+  }
+}
+@media (max-width: 1100px) {
+  #home {
+    background-size: 82%, 75%;
+    background-position-x: -225px, 400px;
+  }
+}
+@media (max-width: 834px) {
+  #home {
+    background-size: 90%, 85%;
+    background-position-x: -270px, 250px;
+  }
+}
+@media (max-width: 850px) {
+  #home {
+    height: 100vh;
+    background-size: 100%, 95%;
+    background-position-x: -250px, 50px;
+  }
+}
+@media (max-width: 600px) {
+  #home {
+    background-size: 115%, 110%;
+    background-position-x: -180px, 10px;
+  }
+}
+@media (max-width: 393px) {
+  #home {
+    background-size: 120%, 130%;
+    background-position-x: -150px, -10px;
+    background-position-y: 580px, 10px;
+  }
+}
+@media (max-width: 370px) {
+  #home {
+    background-size: 140%, 110%;
+    background-position-x: -150px, 10px;
+    background-position-y: 600px, 0px;
+  }
+}
+
+.box {
+  max-width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+@media (max-width: 1700px) {
+  .box {
+    max-width: 95%;
+  }
+}
+@media (max-width: 1200px) {
+  .box {
+    max-width: 100%;
+    align-items: start;
+  }
+}
+@media (max-width: 750px) {
+  .box {
+    align-items: start;
+  }
+}
+@media (max-width: 500px) {
+  .box {
+    max-width: 100%;
+    align-items: start;
+    justify-content: center;
+  }
+}
+
+.box-text {
+  max-width: 850px;
+  height: 700px;
+  font-family: "Just Me Again Down Here", cursive;
+  color: #161581;
+  text-align: center;
+}
+@media (max-width: 850px) {
+  .box-text {
+    text-align: right;
+    margin-right: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .box-text {
+    margin-right: 20px;
+  }
+}
+.box-text h1 {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.box-text h1 svg {
+  fill: #161581;
+  stroke: #161581;
+}
+@media (max-width: 850px) {
+  .box-text h1 svg {
+    max-width: 350pt;
+    text-align: right;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 600px) {
+  .box-text h1 svg {
+    max-width: 300pt;
+    text-align: right;
+  }
+}
+@media (max-width: 460px) {
+  .box-text h1 svg {
+    max-width: 270pt;
+    text-align: right;
+  }
+}
+@media (max-width: 393px) {
+  .box-text h1 svg {
+    max-width: 230pt;
+    text-align: right;
+    margin-right: -10px;
+  }
+}
+.box-text .block-under {
+  width: 430px;
+  height: 80px;
+  /* Le margin permet de centrer le block h2 */
+  margin: 0 auto;
+  background-color: #E8542E;
+  transform: rotate(-5deg);
+}
+@media (max-width: 850px) {
+  .box-text .block-under {
+    width: 350px;
+    height: 70px;
+    margin-right: 5px;
+    margin-top: -30px;
+  }
+}
+@media (max-width: 600px) {
+  .box-text .block-under {
+    width: 320px;
+    height: 70px;
+    margin-top: -30px;
+    margin-right: 0px;
+  }
+}
+@media (max-width: 393px) {
+  .box-text .block-under {
+    width: 290px;
+    height: 70px;
+    margin-top: -50px;
+    margin-right: -5px;
+  }
+}
+.box-text .block-under h2 {
+  font-family: "Kranky", cursive;
+  font-size: 60px;
+  color: #ffffff;
+  font-weight: 100;
+}
+@media (max-width: 850px) {
+  .box-text .block-under h2 {
+    font-size: 55px;
+    padding-right: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .box-text .block-under h2 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 393px) {
+  .box-text .block-under h2 {
+    font-size: 45px;
+  }
+}
+
+.text1,
+.text2,
+.text3 {
+  letter-spacing: 0.05em;
+  margin-top: 5px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.text1 {
+  font-size: 75px;
+}
+@media (max-width: 600px) {
+  .text1 {
+    font-size: 55px;
+  }
+}
+
+.text2 {
+  font-size: 50px;
+}
+@media (max-width: 600px) {
+  .text2 {
+    font-size: 35px;
+  }
+}
+
+.text3 {
+  font-size: 60px;
+}
+@media (max-width: 600px) {
+  .text3 {
+    font-size: 50px;
+  }
+}
+
+/*****   CONCERTS   *****/
+#concerts {
+  background-color: #E0007A;
+  position: relative;
+}
+
+.page-artistes {
+  top: 175px;
+  left: 5%;
+  position: fixed;
+  width: calc(100% - 295px);
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 60px;
+  z-index: 2000;
+}
+.page-artistes .icone-croix {
+  top: 20px;
+  left: 120px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 2001;
+  cursor: pointer;
+}
+.page-artistes .block-concerts1 {
+  width: 27%;
+  background-color: #E0007A;
+}
+.page-artistes .block-concerts1 .text-hour {
+  color: #ffffff;
+  font-family: "Acme", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 15px;
+}
+.page-artistes .block-concerts1 h3 {
+  color: #ffffff;
+  text-align: center;
+}
+.page-artistes .block-concerts1 p {
+  font-family: "Acme", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 15px 30px;
+}
+.page-artistes .block-concerts2 {
+  width: 60%;
+  position: relative;
+  padding-bottom: 56.25%;
+  /*16:9*/
+  height: 0;
+  overflow: hidden;
+}
+.page-artistes .block-concerts2 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.galerie {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -80px;
+}
+
+.item {
+  width: 500px;
+  height: 500px;
+  margin-right: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media (max-width: 1620px) {
+  .item {
+    width: 450px;
+    height: 450px;
+  }
+}
+@media (max-width: 1470px) {
+  .item {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width: 1320px) {
+  .item {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 1170px) {
+  .item {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 1020px) {
+  .item {
+    width: 300px;
+    height: 300px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 960px) {
+  .item {
+    width: 350px;
+    height: 350px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 800px) {
+  .item {
+    width: 300px;
+    height: 300px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 600px) {
+  .item {
+    width: 400px;
+    height: 400px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+.item img {
+  width: 100%;
+  height: 0;
+}
+
+.bloc-parent-image {
+  text-align: center;
+}
+
+/*****   SPECTACLES   *****/
+#spectacles {
+  max-width: 100%;
+  min-height: 100vh;
+  background-image: url(images/ligne-onde-arc-ciel-abstraite-espace-votre-texte-illustration-vectorielle_460848-103751.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 600px) {
+  #spectacles {
+    background-size: 160%;
+    background-attachment: fixed;
+  }
+}
+
+/*****   ACTIVITES   *****/
+#activites {
+  max-width: 100%;
+  min-height: 100vh;
+  background-image: url(images/note-musique-fond-conception-ligne-vague_460848-129001.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 834px) {
+  #activites {
+    background-position-x: -400px;
+    background-size: 170%;
+  }
+}
+@media (max-width: 600px) {
+  #activites {
+    background-position-x: -200px;
+    background-size: 170%;
+  }
+}
+@media (max-width: 600px) {
+  #activites {
+    background-position-y: 40px;
+    background-size: 165%;
+    background-attachment: fixed;
+  }
+}
+
+.galerie-activites {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item-activites {
+  max-width: 30%;
+  height: 30%;
+  margin: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media (max-width: 1450px) {
+  .item-activites {
+    max-width: 40%;
+    height: 40%;
+  }
+}
+@media (max-width: 834px) {
+  .item-activites {
+    max-width: 43%;
+    height: 43%;
+  }
+}
+@media (max-width: 600px) {
+  .item-activites {
+    max-width: 75%;
+    height: 75%;
+  }
+}
+
+.item-activites img {
+  width: 100%;
+  height: 0;
+}
+
+.activites-texte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.activites-texte p {
+  font-family: "Acme", sans-serif;
+  font-size: 45px;
+  text-align: center;
+}
+@media (max-width: 1350px) {
+  .activites-texte p {
+    font-size: 40px;
+  }
+}
+@media (max-width: 834px) {
+  .activites-texte p {
+    margin: 20px;
+    font-size: 40px;
+  }
+}
+@media (max-width: 834px) {
+  .activites-texte p {
+    margin: 20px;
+    font-size: 30px;
+  }
+}
+
+/*****   ABOUT-US   *****/
+#about-us {
+  max-width: 100%;
+  background-image: url(images/conception-fond-resume_1265-99.png), url(images/conception-fond-resume_1265-881.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left, bottom right;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  #about-us {
+    background-position-x: -200px, 75px;
+  }
+}
+@media (max-width: 750px) {
+  #about-us {
+    background-image: url(images/conception-fond-resume_1265-991.png);
+    background-size: cover;
+    background-position-x: -200px;
+  }
+}
+#about-us h3 {
+  display: none;
+}
+#about-us .button-tickets {
+  top: 40px;
+  right: 40px;
+  position: absolute;
+}
+
+.about-us-text {
+  top: 0;
+  left: 45%;
+  position: relative;
+  max-width: 45%;
+  margin-bottom: 10px;
+  font-family: "Acme", sans-serif;
+  margin-bottom: 60px;
+}
+@media (max-width: 1500px) {
+  .about-us-text {
+    left: 40%;
+    max-width: 59%;
+  }
+}
+@media (max-width: 1200px) {
+  .about-us-text {
+    left: 37%;
+    max-width: 57%;
+  }
+}
+@media (max-width: 750px) {
+  .about-us-text {
+    left: 20%;
+    max-width: 65%;
+  }
+}
+@media (max-width: 393px) {
+  .about-us-text {
+    left: 10%;
+    max-width: 85.5%;
+  }
+}
+
+/*****   CONTACT   *****/
+#contact {
+  max-width: 100%;
+  display: flex;
+}
+@media (max-width: 834px) {
+  #contact {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.contact-block1 {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  /*16:9*/
+  overflow: hidden;
+}
+@media (max-width: 834px) {
+  .contact-block1 {
+    height: 0;
+  }
+}
+.contact-block1 iframe {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contact-block2 {
+  max-width: 100%;
+  width: 80%;
+  background-image: url(images/note-musique-fond-conception-ligne-vague_460848-12876.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+@media (max-width: 834px) {
+  .contact-block2 {
+    width: 100%;
+    order: -1;
+  }
+}
+.contact-block2 h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+@media (min-width: 834px) {
+  .contact-block2 h3 {
+    margin-top: 100px;
+  }
+}
+.contact-block2 form {
+  max-width: 100%;
+  padding-bottom: 30px;
+}
+@media (max-width: 834px) {
+  .contact-block2 form {
+    background-position-y: -40%;
+  }
+}
+.contact-block2 form .form-group {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contact-block2 form .form-group input {
+  width: 60%;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  font-family: "Just Me Again Down Here", cursive;
+  font-size: 32px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #E0007A;
+  border: none;
+  border-bottom: solid 1px #E0007A;
+  outline: none;
+}
+.contact-block2 form .form-group inputfocus {
+  outline: none;
+}
+.contact-block2 form .form-group textarea {
+  width: 60%;
+  height: 100px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  font-family: "Just Me Again Down Here", cursive;
+  font-size: 32px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #E0007A;
+  resize: none;
+  border: none;
+  border-bottom: solid 1px #E0007A;
+  outline: none;
+}
+.contact-block2 form .form-group .button-tickets {
+  margin-top: 20px;
+}
+
+/*****   FOOTER   *****/
+footer {
+  max-width: 100%;
+  height: 100%;
+  background-color: #B0C96D;
+}
+
+.icones-partenaires p {
+  font-family: "Acme", sans-serif;
+  font-size: 22px;
+  padding-top: 15px;
+  text-align: center;
+}
+.icones-partenaires ul {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+  border-bottom: solid 1px #000000;
+}
+@media (max-width: 900px) {
+  .icones-partenaires ul {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 900px) {
+  .icones-partenaires ul {
+    margin: 20px 5px 0 5px;
+    justify-content: center;
+  }
+}
+.icones-partenaires ul li {
+  max-width: 50%;
+  list-style: none;
+  margin: 10px;
+}
+@media (max-width: 900px) {
+  .icones-partenaires ul li {
+    margin: 0 5px;
+  }
+}
+
+.footer2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+@media (max-width: 393px) {
+  .footer2 {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer2 #item-3 {
+    order: -1;
+  }
+}
+.footer2 p {
+  font-family: "Acme", sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+}
+@media (max-width: 393px) {
+  .footer2 p {
+    font-size: 12px;
+  }
+}
+
+.icones-liens-sociaux ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.icones-liens-sociaux ul li {
+  list-style: none;
+}
+.icones-liens-sociaux ul li img {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+/*****   BUTTONS + ANIMATION  *****/
+.button {
+  border: 4px dashed #ffffff;
+  color: #ffffff;
+}
+
+.button-pink {
+  border: 4px dashed #E0007A;
+  color: #E0007A;
+}
+
+.button-tickets {
+  width: 170px;
+  height: 67px;
+  background-color: #161581;
+  font-family: "Just Me Again Down Here", cursive;
+  letter-spacing: 0.05em;
+  font-size: 36px;
+  border-radius: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+@media (min-width: 393px) and (max-width: 600px) {
+  .button-tickets {
+    width: 139px;
+    height: 60px;
+    font-size: 30px;
+  }
+}
+.button-tickets.button-animate {
+  transition: border-radius 0.3s ease-in-out;
+}
+.button-tickets.button-animate:hover {
+  border: none;
+  border-radius: 0;
+  background: linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, #161581;
+  background-size: 20px 4px, 20px 4px, 4px 20px, 4px 20px;
+  background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+  animation: dash 5s infinite linear;
+}
+
+@keyframes dash {
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+@media (max-width: 599px) {
+  .button-tickets-hidden {
+    display: none;
+  }
+}
+
+.button-artistes {
+  width: 290px;
+  height: 64px;
+  background-color: #E0007A;
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 32px;
+  border-radius: 20px;
+  margin-top: -30px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+.button-artistes.button-animate {
+  transition: border-radius 0.2s ease-in-out;
+}
+.button-artistes.button-animate:hover {
+  border: none;
+  border-radius: 0;
+  background: linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, #E0007A;
+  background-size: 20px 4px, 20px 4px, 4px 20px, 4px 20px;
+  background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+  animation: dash 8s infinite linear;
+}
+@media (max-width: 1320px) {
+  .button-artistes {
+    width: 272px;
+    height: 60px;
+    font-size: 29px;
+  }
+}
+@media (max-width: 1170px) {
+  .button-artistes {
+    width: 236px;
+    height: 52px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 960px) {
+  .button-artistes {
+    width: 272px;
+    height: 60px;
+    font-size: 29px;
+  }
+}
+@media (min-width: 601px) and (max-width: 800px) {
+  .button-artistes {
+    width: 236px;
+    height: 52px;
+    font-size: 24px;
+  }
+}
+
+.button-artistes-bg-color-white {
+  background-color: #ffffff;
+}
+.button-artistes-bg-color-white.button-animate {
+  transition: border-radius 0.3s ease-in-out;
+}
+.button-artistes-bg-color-white.button-animate:hover {
+  border: none;
+  border-radius: 0;
+  background: linear-gradient(90deg, #E0007A 50%, transparent 0) repeat-x, linear-gradient(90deg, #E0007A 50%, transparent 0) repeat-x, linear-gradient(0deg, #E0007A 50%, transparent 0) repeat-y, linear-gradient(0deg, #E0007A 50%, transparent 0) repeat-y, #ffffff;
+  background-size: 20px 4px, 20px 4px, 4px 20px, 4px 20px;
+  background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+  animation: dash 8s infinite linear;
+}
+
+.button-envoyer {
+  background-color: #E0007A;
+}
+.button-envoyer.button-animate {
+  transition: border-radius 0.3s ease-in-out;
+}
+.button-envoyer.button-animate:hover {
+  border: none;
+  border-radius: 0;
+  background: linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, #E0007A;
+  background-size: 20px 4px, 20px 4px, 4px 20px, 4px 20px;
+  background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+  animation: dash 6s infinite linear;
+}
+
+/*****   BUTTONS - ANIMATION - FLECHE  *****/
+.fleche-animate {
+  max-width: 100%;
+  width: 146px;
+  max-height: 100%;
+  height: 161px;
+  margin-left: 50%;
+  position: fixed;
+  bottom: -60px;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 999;
+}
+
+.fleche-cachee {
+  display: none;
+}
+
+/*****   BUTTONS - TICKET - NAVBAR  *****/
+.button-tickets-phone {
+  width: 200px;
+  color: #ffffff;
+  background-color: #161581;
+  font-family: "Just Me Again Down Here", cursive;
+  letter-spacing: 0.05em;
+  font-size: 36px;
+  cursor: pointer;
+  margin-left: auto;
+}
+.button-tickets-phone:hover {
+  text-decoration: underline dashed #ffffff;
+  text-underline-offset: 10px;
+}
+@media (min-width: 834px) {
+  .button-tickets-phone {
+    display: none;
+  }
+}
+
+/******************************************************************************************/
+/*****   TITLES   *****/
+h3 {
+  font-family: "Acme", sans-serif;
+  font-size: 50px;
+  color: #E0007A;
+  padding: 30px;
+}
+@media (max-width: 600px) {
+  h3 {
+    font-size: 42px;
+    padding: 10px;
+  }
+}
+@media (max-width: 393px) {
+  h3 {
+    font-size: 35px;
+    padding: 0px;
+  }
+}
+
+.h3-title {
+  color: #ffffff;
+}
+
+.h3-title-pink {
+  color: #E0007A;
+}
+
+/*****   TITLES (ABOUT-US)   *****/
+.title-h4-and-h5 {
+  text-align: center;
+  font-weight: 100;
+}
+.title-h4-and-h5 span {
+  display: block;
+}
+
+.about-us-text1 h4 {
+  margin-top: 150px;
+  font-size: 40px;
+}
+@media (max-width: 834px) {
+  .about-us-text1 h4 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 600px) {
+  .about-us-text1 h4 {
+    font-size: 28px;
+  }
+}
+.about-us-text1 h5 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+@media (max-width: 1100px) {
+  .about-us-text1 h5 {
+    font-size: 27px;
+  }
+}
+@media (max-width: 834px) {
+  .about-us-text1 h5 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .about-us-text1 h5 {
+    font-size: 22px;
+  }
+}
+
+.about-us-text2 h6 {
+  font-size: 25px;
+  letter-spacing: 0.02rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-decoration: underline solid 2px;
+  font-weight: 500;
+}
+@media (max-width: 1100px) {
+  .about-us-text2 h6 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 834px) {
+  .about-us-text2 h6 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 750px) {
+  .about-us-text2 h6 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .about-us-text2 h6 {
+    font-size: 18px;
+  }
+}
+.about-us-text2 p {
+  font-size: 22px;
+  letter-spacing: 0.02rem;
+  margin-top: 5px;
+}
+@media (max-width: 1100px) {
+  .about-us-text2 p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 834px) {
+  .about-us-text2 p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 600px) {
+  .about-us-text2 p {
+    font-size: 16px;
+  }
+}
+
+.about-us-title {
+  font-size: 40px;
+}
+@media (max-width: 750px) {
+  .about-us-title {
+    font-size: 35px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

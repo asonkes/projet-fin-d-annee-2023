@@ -1,0 +1,61 @@
+/*****   ABOUT-US   *****/
+
+#about-us {
+    max-width: 100%;
+    background-image: url(images/conception-fond-resume_1265-99.png), url(images/conception-fond-resume_1265-881.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left, bottom right;
+
+    position: relative;
+
+    @media (max-width: 1200px) {
+        background-position-x: -200px, 75px;
+    }
+
+    @media (max-width: 750px) {
+        background-image: url(images/conception-fond-resume_1265-991.png);
+        background-size: cover;
+        background-position-x: -200px;
+    }
+
+    h3 {
+        display: none;
+    }
+
+    .button-tickets {
+        top: 40px;
+        right: 40px;
+        position: absolute;
+    }
+}
+
+.about-us-text {
+    top: 0;
+    left: 45%;
+    position: relative;
+    max-width: 45%;
+    margin-bottom: 10px;
+    font-family: $font-title;
+    margin-bottom: 60px;
+
+    @media (max-width: 1500px) {
+        left: 40%;
+        max-width: 59%;
+    }
+
+    @media (max-width: 1200px) {
+        left: 37%;
+        max-width: 57%;
+    }
+
+    @media(max-width: 750px) {
+        left: 20%;
+        max-width: 65%;
+    }
+
+    @media(max-width: 393px) {
+        left: 10%;
+        max-width: 85.5%;
+    }
+}

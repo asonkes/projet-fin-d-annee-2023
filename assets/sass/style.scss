@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kranky&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+
+@import "config/variables.scss";
+@import "config/utility.scss";
+@import "layout/base.scss";
+
+@import "composants/menu.scss";
+@import "composants/home.scss";
+@import "composants/concerts.scss";
+@import "composants/spectacles.scss";
+@import "composants/activites.scss";
+@import "composants/about-us.scss";
+@import "composants/contact.scss";
+@import "composants/footer.scss";
+
+@import "composants/buttons-animations.scss";
+@import "composants/titles.scss";

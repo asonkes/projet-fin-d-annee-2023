@@ -1,0 +1,123 @@
+/*****   TITLES   *****/
+
+h3 {
+    font-family: $font-title;
+    font-size: 50px;
+    color: $font-color-pink2;
+    padding: 30px;
+
+    @media(max-width: $size-phone) {
+        font-size: 42px;
+        padding: 10px;
+    }
+
+    @media(max-width: 393px) {
+        font-size: 35px;
+        padding: 0px;
+    }
+}
+
+.h3-title {
+    color: $font-color-white;
+}
+
+.h3-title-pink {
+    color: $font-color-pink2;
+}
+
+/*****   TITLES (ABOUT-US)   *****/
+
+.title-h4-and-h5 {
+    text-align: center;
+    font-weight: 100;
+
+    span {
+        display: block;
+    }
+}
+
+.about-us-text1 {
+    h4 {
+        margin-top: 150px;
+        font-size: 40px;
+
+        @media(max-width: $size-tablette) {
+            font-size: 35px;
+        }
+
+        @media(max-width: $size-phone) {
+            font-size: 28px;
+        }
+    }
+
+    h5 {
+        margin-top: 20px;
+        font-size: 30px;
+
+        @media(max-width: 1100px) {
+            font-size: 27px;
+        }
+
+        @media(max-width: $size-tablette) {
+            font-size: 24px;
+        }
+
+        @media(max-width: $size-phone) {
+            font-size: 22px;
+        }
+
+    }
+}
+
+.about-us-text2 {
+    h6 {
+        font-size: 25px;
+        letter-spacing: 0.02rem;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        text-decoration: underline solid 2px;
+        font-weight: 500;
+
+        @media(max-width: 1100px) {
+            font-size: 20px;
+        }
+
+        @media(max-width: $size-tablette) {
+            font-size: 23px;
+        }
+
+        @media(max-width: 750px) {
+            font-size: 20px;
+        }
+
+        @media(max-width: $size-phone) {
+            font-size: 18px;
+        }
+    }
+
+    p {
+        font-size: 22px;
+        letter-spacing: 0.02rem;
+        margin-top: 5px;
+
+        @media(max-width: 1100px) {
+            font-size: 20px;
+        }
+
+        @media(max-width: $size-tablette) {
+            font-size: 17px;
+        }
+
+        @media(max-width: $size-phone) {
+            font-size: 16px;
+        }
+    }
+}
+
+.about-us-title {
+    font-size: 40px;
+
+    @media(max-width: 750px) {
+        font-size: 35px;
+    }
+}

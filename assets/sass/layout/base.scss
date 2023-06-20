@@ -1,0 +1,52 @@
+/*****BASE*****/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    padding-top: 176px;
+    background-color: $font-color-white;
+    overflow-x: hidden;
+
+    @media (max-width: 393px) {
+        padding-top: 145px;
+    }
+}
+
+.slide {
+    max-width: 100%;
+    /* Pour permettre de déduire la "height" de "pre_header" et de "header", body commence en-dessous de ces 2 éléments */
+    min-height: calc(100vh - 175px);
+    overflow-y: hidden;
+
+    @media (max-width: 393px) {
+        min-height: calc(100vh - 145px);
+    }
+}
+
+.wrapper {
+    max-width: 1620px;
+    margin: 0 auto;
+}
+
+/* Code inspiration bootstrap */
+/* https://stackoverflow.com/questions/19758598/what-is-sr-only-in-bootstrap-3 */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}

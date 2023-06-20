@@ -1,0 +1,14 @@
+/*****   SPECTACLES   *****/
+
+#spectacles {
+    max-width: 100%;
+    min-height: 100vh;
+    background-image: url(images/ligne-onde-arc-ciel-abstraite-espace-votre-texte-illustration-vectorielle_460848-103751.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: $size-phone) {
+        background-size: 160%;
+        background-attachment: fixed;
+    }
+}

@@ -1,0 +1,203 @@
+/*****HOME*****/
+
+#home {
+    width: 100%;
+    background-image: url(images/Image2_fond_transparent.png), url(images/notes-musique-pour-conception-illustration-vectorielle-votre-projetxaxa_460848-118341.png);
+    background-repeat: no-repeat;
+    background-position: bottom left, top right;
+
+    @media(max-width: $size-dekstop-big) {
+        background-size: 65%, 55%;
+        background-position-y: bottom, top right;
+    }
+
+    @media(max-width: $size-dekstop-mini) {
+        background-size: 82%, 75%;
+        background-position-x: -225px, 400px;
+    }
+
+    @media(max-width: $size-tablette) {
+        background-size: 90%, 85%;
+        background-position-x: -270px, 250px;
+    }
+
+    @media(max-width: 850px) {
+        height: 100vh;
+        background-size: 100%, 95%;
+        background-position-x: -250px, 50px;
+    }
+
+    @media(max-width: $size-phone) {
+        background-size: 115%, 110%;
+        background-position-x: -180px, 10px;
+    }
+
+    @media(max-width: 393px) {
+        background-size: 120%, 130%;
+        background-position-x: -150px, -10px;
+        background-position-y: 580px, 10px;
+    }
+
+    @media(max-width: 370px) {
+        background-size: 140%, 110%;
+        background-position-x: -150px, 10px;
+        background-position-y: 600px, 0px;
+    }
+}
+
+.box {
+    max-width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    @media(max-width: 1700px) {
+        max-width: 95%;
+    }
+
+    @media(max-width: 1200px) {
+        max-width: 100%;
+        align-items: start;
+    }
+
+    @media(max-width: 750px) {
+        align-items: start;
+    }
+
+    @media(max-width: 500px) {
+        max-width: 100%;
+        align-items: start;
+        justify-content: center;
+    }
+}
+
+.box-text {
+    max-width: 850px;
+    height: 700px;
+    font-family: $font-text;
+    color: $font-color-blue;
+    text-align: center;
+
+    @media (max-width: 850px) {
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    @media (max-width: $size-phone) {
+        margin-right: 20px;
+    }
+
+    h1 {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+        svg {
+            fill: $font-color-blue;
+            stroke: $font-color-blue;
+
+            @media(max-width: 850px) {
+                max-width: 350pt;
+                text-align: right;
+                margin-right: -20px;
+            }
+
+            @media(max-width: $size-phone) {
+                max-width: 300pt;
+                text-align: right;
+            }
+
+            @media(max-width: 460px) {
+                max-width: 270pt;
+                text-align: right;
+            }
+
+            @media(max-width: 393px) {
+                max-width: 230pt;
+                text-align: right;
+                margin-right: -10px;
+            }
+        }
+    }
+
+    .block-under {
+        width: 430px;
+        height: 80px;
+        /* Le margin permet de centrer le block h2 */
+        margin: 0 auto;
+        background-color: $font-color-orange;
+        transform: rotate(-5deg);
+
+        @media (max-width: 850px) {
+            width: 350px;
+            height: 70px;
+            margin-right: 5px;
+            margin-top: -30px;
+        }
+
+        @media (max-width: $size-phone) {
+            width: 320px;
+            height: 70px;
+            margin-top: -30px;
+            margin-right: 0px;
+        }
+
+        @media (max-width: 393px) {
+            width: 290px;
+            height: 70px;
+            margin-top: -50px;
+            margin-right: -5px;
+        }
+
+        h2 {
+            font-family: 'Kranky', cursive;
+            font-size: 60px;
+            color: $font-color-white;
+            font-weight: 100;
+
+            @media (max-width: 850px) {
+                font-size: 55px;
+                padding-right: 5px;
+            }
+
+            @media (max-width: $size-phone) {
+                font-size: 50px;
+            }
+
+            @media (max-width: 393px) {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+.text1,
+.text2,
+.text3 {
+    letter-spacing: 0.05em;
+    margin-top: 5px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.text1 {
+    font-size: 75px;
+
+    @media(max-width: $size-phone) {
+        font-size: 55px;
+    }
+}
+
+.text2 {
+    font-size: 50px;
+
+    @media(max-width: $size-phone) {
+        font-size: 35px;
+    }
+}
+
+.text3 {
+    font-size: 60px;
+
+    @media(max-width: $size-phone) {
+        font-size: 50px;
+    }
+}

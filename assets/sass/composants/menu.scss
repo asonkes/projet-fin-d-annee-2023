@@ -1,0 +1,282 @@
+/*****   MENU   *****/
+
+#pre-header {
+    top: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
+    height: $pre-header-height;
+    background-color: $font-color-green;
+    z-index: 50;
+
+    ul {
+        max-width: 100%;
+        height: $pre-header-height;
+        list-style: none;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        li a {
+            font-size: 20px;
+            padding: 7px;
+            font-family: $font-title;
+            text-decoration: none;
+            color: #000;
+
+            svg {
+                width: 25px;
+            }
+
+            &:hover {
+                font-size: 25px;
+
+                svg {
+                    width: 30px;
+                }
+            }
+        }
+
+        li#pre-header-alignement {
+
+            @media(max-width: 393px) {
+                margin-left: auto;
+            }
+        }
+    }
+
+    .link-3 {
+        padding-right: 37px;
+    }
+
+    .link-5 {
+        padding-right: 17px;
+
+        &:hover {
+            width: 30px;
+        }
+    }
+}
+
+header {
+    top: $pre-header-height;
+    right: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    border: solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.95);
+
+    @media (max-width: 833px) {
+        height: $menu-height-mobile;
+        border: none;
+    }
+}
+
+.logo {
+    margin: auto;
+
+    @media (max-width: 833px) {
+        max-width: $menu-height-mobile;
+        margin: 0;
+    }
+
+    @media (max-width: 393px) {
+        max-width: $menu-height-mobile;
+    }
+}
+
+/*****   MENU BURGER  *****/
+.burger {
+    width: 60px;
+    height: 24px;
+    cursor: pointer;
+    align-self: center;
+    margin: 0 25px;
+
+    @media (min-width: 834px) {
+        display: none;
+    }
+
+    span {
+        width: 100%;
+        height: 10px;
+        background-color: $font-color-blue;
+        border-radius: 12px;
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-color 0.15s ease-in-out;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background-color: $font-color-blue;
+            transition: transform 0.15s ease-in-out;
+            /* Transition ease-in-out à un démarrage et une fin lente */
+        }
+
+        &::before {
+            transform: translateY(-20px);
+            border-radius: 12px;
+        }
+
+        &::after {
+            transform: translateY(20px);
+            border-radius: 12px;
+        }
+    }
+
+    &.active span {
+        background-color: transparent;
+
+        &::before {
+            transform: translateY(0px) rotateZ(45deg);
+        }
+
+        &::after {
+            transform: translateY(0px) rotateZ(-45deg);
+        }
+    }
+}
+
+/*****   FIN MENU BURGER  *****/
+nav {
+    top: $pre-header-height;
+    width: 100%;
+    height: $menu-height;
+
+    @media (max-width: 833px) {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        background-color: $font-color-blue;
+        height: calc(100vh - 145px);
+        overflow-y: auto;
+        z-index: 15000;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    ul {
+        max-width: 100%;
+        height: $menu-height;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        align-items: center;
+
+        @media (max-width: $size-dekstop-mini) {
+            justify-content: center;
+        }
+
+        @media (max-width: 833px) {
+            flex-direction: column;
+            justify-content: start;
+            flex-wrap: nowrap;
+            align-items: flex-end;
+            height: 100%;
+        }
+
+        li {
+            width: $menu-width-item;
+            height: $menu-height;
+            text-align: center;
+
+            @media (max-width: $size-dekstop-big) {
+                width: $menu-width-item-big;
+            }
+
+            @media (max-width: $size-dekstop-mini) {
+                width: 126px;
+            }
+
+            @media (max-width: 900px) {
+                width: 115px;
+            }
+
+
+            @media (max-width: 833px) {
+                width: 100%;
+                border: 1px solid $font-color-white;
+                display: flex;
+                justify-content: center;
+            }
+
+
+            &.active,
+            &:hover {
+
+                @media (max-width: 833px) {
+                    background-color: $font-color-white;
+                    border: 1px solid $font-color-blue;
+                }
+
+                a {
+                    max-width: 100%;
+                    height: 100%;
+                    background-image: url(images/underline.png);
+                    background-repeat: no-repeat;
+                    background-size: 90%;
+                    transition: all 0.2s;
+
+                    @media (max-width: 833px) {
+                        color: $font-color-blue;
+                        max-width: 300px;
+                        height: 100px;
+                        max-width: 100%;
+                        height: 100%;
+                        background-image: url(images/underline2.png);
+                        background-repeat: no-repeat;
+                        background-size: 90%;
+                        background-color: $font-color-white;
+                        color: $font-color-blue;
+                    }
+                }
+            }
+
+            a {
+                width: $menu-width-item;
+                line-height: $menu-height;
+                color: $font-color-pink;
+                font-size: 30px;
+                text-decoration: none;
+                text-align: center;
+                font-family: $font-title;
+                padding: 20px;
+                background-position: center bottom;
+
+                @media (max-width: $size-dekstop-big) {
+                    width: $menu-width-item-big;
+                    font-size: 27px;
+                }
+
+                @media (max-width: $size-dekstop-mini) {
+                    width: $menu-width-item-mini;
+                    font-size: 23px;
+                }
+
+                @media (max-width: 900px) {
+                    width: $menu-width-item-mini;
+                    font-size: 20px;
+                }
+
+                @media (max-width: 833px) {
+                    line-height: calc($menu-height-mobile - 20px);
+                    color: $font-color-white;
+                    background-position: center 80%;
+                }
+            }
+        }
+    }
+}

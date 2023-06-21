@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="projet de fin d'année sur le thème d'un festival de musique se nommant Lolly POP"
+    />
+    <meta property="og:title" content="Lolly POP, Festival de musique pour les enfants" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Festival de musique sensibilisant principalement les enfants" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Lolly POP" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -216,15 +225,17 @@
           </div>
         </div>
         <div class="block-concerts2">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/iXThSfCrYRk"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <div class="block-concerts2-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/iXThSfCrYRk"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
 
@@ -272,6 +283,38 @@
       <div class="button-title-alignement">
         <h3 class="h3-title-pink">Spectacles</h3>
         <button class="button button-tickets button-animate button-tickets-hidden" type="button">Tickets</button>
+      </div>
+
+      <div class="billeterie">
+        <div class="paiement-panier">
+          <div class="block-1">
+            <a id="icone-croix2"><img src="assets/icones/Close-30.png" /></a>
+            <a><img src="assets/icones/Shopping-Cart-01-40.png" /></a>
+          </div>
+          <div class="text-1">Tickets d'entrée</div>
+          <div class="ticket-alignement">
+            <div class="ticket-alignement-1">
+              <p class="text-color-blue">Tickets d'entrée adulte</p>
+              <p class="text-color-green alignement-left">57.50€</p>
+              <button class="button button-panier button-animate" type="button">Ajouter au panier</button>
+            </div>
+            <div class="ticket-alignement-1">
+              <p class="text-color-blue">Ticket d’entrée Etudiant (de 16 à 24 ans)</p>
+              <p class="text-color-green">47.50€</p>
+              <button class="button button-panier button-animate" type="button">Ajouter au panier</button>
+            </div>
+            <div class="ticket-alignement-1">
+              <p class="text-color-blue">Ticket d’entrée Enfant (de 3 à 16 ans)</p>
+              <p class="text-color-green">26.50€</p>
+              <button class="button button-panier button-animate" type="button">Ajouter au panier</button>
+            </div>
+            <div class="ticket-alignement-1-special">
+              <p class="text-color-blue">Ticket d’entrée Bébé</p>
+              <p class="text-color-green alignement-left">0.00€</p>
+              <button class="button button-panier button-animate" type="button">Ajouter au panier</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="wrapper galerie">
@@ -326,7 +369,7 @@
       </div>
 
       <div class="fleche-animate">
-        <img class="img-fleche-animate" src="assets/image-fleche/Fleche_1.png" />
+        <img class="img-fleche-animate" src="assets/image-fleche/Fleche_3.png" />
       </div>
     </div>
     <!--------------------------------------------------------------------------------->
@@ -531,6 +574,43 @@
         });
       });
 
+      /********************* EFFET CROIX PAGE POP UP ARTISTES *********************/
+      const concerts = document.getElementById("concerts");
+      const boutonArtiste = concerts.getElementsByClassName("button-artistes");
+      const pageArtiste = concerts.getElementsByClassName("page-artistes");
+      const iconeCroix = document.getElementsByClassName("icone-croix");
+
+      //On note [0], car ici, on ne fait qu'un exemple pour le élément...//
+      boutonArtiste[0].addEventListener("click", function () {
+        pageArtiste[0].classList.add("active");
+      });
+
+      iconeCroix[0].addEventListener("click", function () {
+        pageArtiste[0].classList.remove("active");
+      });
+
+      /********************* EFFET CROIX PAGE POP UP ARTISTES *********************/
+      //On récupère tous les boutons tickets//
+      const tickets = document.querySelectorAll(".button-tickets");
+      console.log(".button-tickets");
+      //On récupère la croix2 pour pouvoir fermer la pop-up des paniers et on utilise getElementById puisqu'on a mis un id//
+      const iconeCroix2 = document.getElementById("icone-croix2");
+      console.log("icone-croix2");
+
+      const billeterie = spectacles.querySelector(".billeterie");
+      console.log(billeterie);
+
+      //Ici, on recherche tous les éléments du tickets, comme plusieurs, on fait un foreach//
+      tickets.forEach((elem) => {
+        elem.addEventListener("click", () => {
+          billeterie.classList.add("active");
+        });
+      });
+
+      iconeCroix2.addEventListener("click", function () {
+        billeterie.classList.remove("active");
+      });
+
       /********************* MENU SCROLL TO SLIDE *********************/
 
       // On stocke dans une variable (un tableau) tous les éléments avec la classe "slide".
@@ -658,7 +738,7 @@
         const windowHeight = window.innerHeight;
 
         // On vérifie si le haut du dernier slide est visible à l'écran moins la hauteur du pre-header et du header
-        // puis on ajoute ou on retirela classe "fleche-cachee" si nécessaire.
+        // puis on ajoute ou on retire la classe "fleche-cachee" si nécessaire.
         if (
           scrollPosition + windowHeight >=
           lastSlideOffsetTop + lastSlideHeight - preHeader.clientHeight - header.offsetHeight

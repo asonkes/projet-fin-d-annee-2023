@@ -21,7 +21,7 @@ body {
     max-width: 100%;
     /* Pour permettre de déduire la "height" de "pre_header" et de "header", body commence en-dessous de ces 2 éléments */
     min-height: calc(100vh - 175px);
-    overflow-y: hidden;
+    overflow: hidden;
 
     @media (max-width: 393px) {
         min-height: calc(100vh - 145px);

@@ -61,7 +61,7 @@
 
 .button-artistes {
     width: 290px;
-    height: 64px;
+    min-height: 64px;
     background-color: $font-color-pink2;
     font-family: $font-button;
     font-size: 32px;
@@ -91,25 +91,25 @@
 
     @media (max-width: 1320px) {
         width: 272px;
-        height: 60px;
+        min-height: 60px;
         font-size: 29px;
     }
 
     @media (max-width: 1170px) {
         width: 236px;
-        height: 52px;
+        min-height: 52px;
         font-size: 24px;
     }
 
     @media (max-width: 960px) {
         width: 272px;
-        height: 60px;
+        min-height: 60px;
         font-size: 29px;
     }
 
     @media (min-width: 601px) and (max-width: 800px) {
         width: 236px;
-        height: 52px;
+        min-height: 52px;
         font-size: 24px;
     }
 }
@@ -139,7 +139,15 @@
 }
 
 .button-envoyer {
+    width: 170px;
+    height: 67px;
     background-color: $font-color-pink2;
+    font-family: $font-text;
+    letter-spacing: 0.05em;
+    font-size: 36px;
+    border-radius: 30px;
+    margin-top: 10px;
+    cursor: pointer;
 
     &.button-animate {
         transition: border-radius 0.3s ease-in-out;
@@ -206,8 +214,8 @@
 /*****   BUTTONS - PANIER  *****/
 
 .button-panier {
-    width: 190px;
-    height: 52px;
+    min-width: 190px;
+    min-height: 52px;
     background-color: $font-color-orange;
     font-family: $font-text;
     letter-spacing: 0.05em;
@@ -215,6 +223,8 @@
     border-radius: 30px;
     margin-top: 10px;
     cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
 
     &.button-animate {
         transition: border-radius 0.3s ease-in-out;

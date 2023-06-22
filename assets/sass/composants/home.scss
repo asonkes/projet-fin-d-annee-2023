@@ -35,13 +35,13 @@
     @media(max-width: 393px) {
         background-size: 120%, 130%;
         background-position-x: -150px, -10px;
-        background-position-y: 580px, 10px;
+        background-position-y: 400px, 10px;
     }
 
-    @media(max-width: 370px) {
+    @media(max-width: 380px) {
         background-size: 140%, 110%;
         background-position-x: -150px, 10px;
-        background-position-y: 600px, 0px;
+        background-position-y: 400px, 0px;
     }
 }
 
@@ -121,31 +121,24 @@
 
     .block-under {
         width: 430px;
-        height: 80px;
         /* Le margin permet de centrer le block h2 */
         margin: 0 auto;
         background-color: $font-color-orange;
         transform: rotate(-5deg);
+        padding: 15px;
+        text-align: center;
 
         @media (max-width: 850px) {
-            width: 350px;
-            height: 70px;
-            margin-right: 5px;
+            width: 100%;
             margin-top: -30px;
         }
 
         @media (max-width: $size-phone) {
-            width: 320px;
-            height: 70px;
             margin-top: -30px;
-            margin-right: 0px;
         }
 
         @media (max-width: 393px) {
-            width: 290px;
-            height: 70px;
             margin-top: -50px;
-            margin-right: -5px;
         }
 
         h2 {
@@ -155,16 +148,7 @@
             font-weight: 100;
 
             @media (max-width: 850px) {
-                font-size: 55px;
-                padding-right: 5px;
-            }
-
-            @media (max-width: $size-phone) {
-                font-size: 50px;
-            }
-
-            @media (max-width: 393px) {
-                font-size: 45px;
+                font-size: 40px;
             }
         }
     }

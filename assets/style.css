@@ -72,7 +72,7 @@ body {
   max-width: 100%;
   /* Pour permettre de déduire la "height" de "pre_header" et de "header", body commence en-dessous de ces 2 éléments */
   min-height: calc(100vh - 175px);
-  overflow-y: hidden;
+  overflow: hidden;
 }
 @media (max-width: 393px) {
   .slide {
@@ -314,7 +314,7 @@ nav ul li {
   }
 }
 nav ul li.active a, nav ul li:hover a {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   background-image: url(images/underline.png);
   background-repeat: no-repeat;
@@ -336,7 +336,7 @@ nav ul li.active a, nav ul li:hover a {
   }
 }
 nav ul li a {
-  width: 200px;
+  min-width: 200px;
   line-height: 120px;
   color: #D04264;
   font-size: 30px;
@@ -414,14 +414,14 @@ nav ul li a {
   #home {
     background-size: 120%, 130%;
     background-position-x: -150px, -10px;
-    background-position-y: 580px, 10px;
+    background-position-y: 400px, 10px;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 380px) {
   #home {
     background-size: 140%, 110%;
     background-position-x: -150px, 10px;
-    background-position-y: 600px, 0px;
+    background-position-y: 400px, 0px;
   }
 }
 
@@ -509,34 +509,27 @@ nav ul li a {
 }
 .box-text .block-under {
   width: 430px;
-  height: 80px;
   /* Le margin permet de centrer le block h2 */
   margin: 0 auto;
   background-color: #E8542E;
   transform: rotate(-5deg);
+  padding: 15px;
+  text-align: center;
 }
 @media (max-width: 850px) {
   .box-text .block-under {
-    width: 350px;
-    height: 70px;
-    margin-right: 5px;
+    width: 100%;
     margin-top: -30px;
   }
 }
 @media (max-width: 600px) {
   .box-text .block-under {
-    width: 320px;
-    height: 70px;
     margin-top: -30px;
-    margin-right: 0px;
   }
 }
 @media (max-width: 393px) {
   .box-text .block-under {
-    width: 290px;
-    height: 70px;
     margin-top: -50px;
-    margin-right: -5px;
   }
 }
 .box-text .block-under h2 {
@@ -547,18 +540,7 @@ nav ul li a {
 }
 @media (max-width: 850px) {
   .box-text .block-under h2 {
-    font-size: 55px;
-    padding-right: 5px;
-  }
-}
-@media (max-width: 600px) {
-  .box-text .block-under h2 {
-    font-size: 50px;
-  }
-}
-@media (max-width: 393px) {
-  .box-text .block-under h2 {
-    font-size: 45px;
+    font-size: 40px;
   }
 }
 
@@ -817,6 +799,7 @@ nav ul li a {
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
+  overflow-y: auto;
 }
 @media (max-width: 1350px) {
   .paiement-panier {
@@ -940,7 +923,7 @@ nav ul li a {
 }
 @media (max-width: 350px) {
   .text-color-green {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -1343,7 +1326,7 @@ footer {
 
 .button-artistes {
   width: 290px;
-  height: 64px;
+  min-height: 64px;
   background-color: #E0007A;
   font-family: "Akaya Kanadaka", cursive;
   font-size: 32px;
@@ -1366,28 +1349,28 @@ footer {
 @media (max-width: 1320px) {
   .button-artistes {
     width: 272px;
-    height: 60px;
+    min-height: 60px;
     font-size: 29px;
   }
 }
 @media (max-width: 1170px) {
   .button-artistes {
     width: 236px;
-    height: 52px;
+    min-height: 52px;
     font-size: 24px;
   }
 }
 @media (max-width: 960px) {
   .button-artistes {
     width: 272px;
-    height: 60px;
+    min-height: 60px;
     font-size: 29px;
   }
 }
 @media (min-width: 601px) and (max-width: 800px) {
   .button-artistes {
     width: 236px;
-    height: 52px;
+    min-height: 52px;
     font-size: 24px;
   }
 }
@@ -1408,7 +1391,15 @@ footer {
 }
 
 .button-envoyer {
+  width: 170px;
+  height: 67px;
   background-color: #E0007A;
+  font-family: "Just Me Again Down Here", cursive;
+  letter-spacing: 0.05em;
+  font-size: 36px;
+  border-radius: 30px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 .button-envoyer.button-animate {
   transition: border-radius 0.3s ease-in-out;
@@ -1463,8 +1454,8 @@ footer {
 
 /*****   BUTTONS - PANIER  *****/
 .button-panier {
-  width: 190px;
-  height: 52px;
+  min-width: 190px;
+  min-height: 52px;
   background-color: #E8542E;
   font-family: "Just Me Again Down Here", cursive;
   letter-spacing: 0.05em;
@@ -1472,6 +1463,8 @@ footer {
   border-radius: 30px;
   margin-top: 10px;
   cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .button-panier.button-animate {
   transition: border-radius 0.3s ease-in-out;

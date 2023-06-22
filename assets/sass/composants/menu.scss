@@ -222,7 +222,7 @@ nav {
                 }
 
                 a {
-                    max-width: 100%;
+                    width: 100%;
                     height: 100%;
                     background-image: url(images/underline.png);
                     background-repeat: no-repeat;
@@ -245,7 +245,7 @@ nav {
             }
 
             a {
-                width: $menu-width-item;
+                min-width: $menu-width-item;
                 line-height: $menu-height;
                 color: $font-color-pink;
                 font-size: 30px;

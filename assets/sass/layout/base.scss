@@ -8,7 +8,7 @@
 
 body {
     height: 100%;
-    padding-top: 176px;
+    padding-top: 130px;
     background-color: $font-color-white;
     overflow-x: hidden;
 
@@ -20,7 +20,7 @@ body {
 .slide {
     max-width: 100%;
     /* Pour permettre de déduire la "height" de "pre_header" et de "header", body commence en-dessous de ces 2 éléments */
-    min-height: calc(100vh - 175px);
+    min-height: calc(100vh - 130px);
     overflow: hidden;
 
     @media (max-width: 393px) {

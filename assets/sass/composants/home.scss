@@ -6,12 +6,12 @@
     background-repeat: no-repeat;
     background-position: bottom left, top right;
 
-    @media(max-width: $size-dekstop-big) {
+    @media(max-width: $size-dekstop1) {
         background-size: 65%, 55%;
         background-position-y: bottom, top right;
     }
 
-    @media(max-width: $size-dekstop-mini) {
+    @media(max-width: $size-dekstop3) {
         background-size: 82%, 75%;
         background-position-x: -225px, 400px;
     }
@@ -21,27 +21,21 @@
         background-position-x: -270px, 250px;
     }
 
-    @media(max-width: 850px) {
-        height: 100vh;
-        background-size: 100%, 95%;
-        background-position-x: -250px, 50px;
-    }
-
-    @media(max-width: $size-phone) {
+    @media(max-width: $size-burger) {
         background-size: 115%, 110%;
         background-position-x: -180px, 10px;
     }
 
-    @media(max-width: 393px) {
+    @media(max-width: $size-phone) {
         background-size: 120%, 130%;
         background-position-x: -150px, -10px;
-        background-position-y: 400px, 10px;
+        background-position-y: 430px, 10px;
     }
 
-    @media(max-width: 380px) {
+    @media(max-width: $size-phone1) {
         background-size: 140%, 110%;
         background-position-x: -150px, 10px;
-        background-position-y: 400px, 0px;
+        background-position-y: 460px, 0px;
     }
 }
 
@@ -61,7 +55,7 @@
         align-items: start;
     }
 
-    @media(max-width: 750px) {
+    @media(max-width: $size-tablette2) {
         align-items: start;
     }
 
@@ -79,7 +73,7 @@
     color: $font-color-blue;
     text-align: center;
 
-    @media (max-width: 850px) {
+    @media (max-width: $size-tablette) {
         text-align: right;
         margin-right: 50px;
     }
@@ -95,13 +89,13 @@
             fill: $font-color-blue;
             stroke: $font-color-blue;
 
-            @media(max-width: 850px) {
+            @media(max-width: $size-tablette) {
                 max-width: 350pt;
                 text-align: right;
                 margin-right: -20px;
             }
 
-            @media(max-width: $size-phone) {
+            @media(max-width: $size-burger) {
                 max-width: 300pt;
                 text-align: right;
             }
@@ -111,7 +105,7 @@
                 text-align: right;
             }
 
-            @media(max-width: 393px) {
+            @media(max-width: $size-phone) {
                 max-width: 230pt;
                 text-align: right;
                 margin-right: -10px;
@@ -119,25 +113,33 @@
         }
     }
 
-    .block-under {
+    .title-highlight {
         width: 430px;
         /* Le margin permet de centrer le block h2 */
-        margin: 0 auto;
+        margin: -10px auto;
         background-color: $font-color-orange;
         transform: rotate(-5deg);
         padding: 15px;
         text-align: center;
+        animation-name: example;
+        animation-duration: 4s;
 
-        @media (max-width: 850px) {
+        @keyframes example {
+            0% {
+                transform: rotate(2turn);
+            }
+        }
+
+        @media (max-width: $size-tablette) {
             width: 100%;
             margin-top: -30px;
         }
 
-        @media (max-width: $size-phone) {
+        @media (max-width: $size-burger) {
             margin-top: -30px;
         }
 
-        @media (max-width: 393px) {
+        @media (max-width: $size-phone) {
             margin-top: -50px;
         }
 
@@ -147,41 +149,41 @@
             color: $font-color-white;
             font-weight: 100;
 
-            @media (max-width: 850px) {
+            @media (max-width: $size-tablette) {
                 font-size: 40px;
             }
         }
     }
 }
 
-.text1,
-.text2,
-.text3 {
+.text-home-date,
+.text-home-location,
+.text-home-hour {
     letter-spacing: 0.05em;
     margin-top: 5px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.text1 {
+.text-home-date {
     font-size: 75px;
 
-    @media(max-width: $size-phone) {
+    @media(max-width: $size-burger) {
         font-size: 55px;
     }
 }
 
-.text2 {
+.text-home-location {
     font-size: 50px;
 
-    @media(max-width: $size-phone) {
+    @media(max-width: $size-burger) {
         font-size: 35px;
     }
 }
 
-.text3 {
-    font-size: 60px;
+.text-home-hour {
+    font-size: 50px;
 
-    @media(max-width: $size-phone) {
+    @media(max-width: $size-burger) {
         font-size: 50px;
     }
 }

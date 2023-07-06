@@ -21,7 +21,7 @@
     margin-top: 10px;
     cursor: pointer;
 
-    @media (min-width: 393px) and (max-width: $size-phone) {
+    @media (min-width: 393px) and (max-width: $size-burger) {
         width: 139px;
         height: 60px;
         font-size: 30px;
@@ -54,12 +54,12 @@
 }
 
 .button-tickets-hidden {
-    @media (max-width: 599px) {
+    @media (max-width: $size-burger1) {
         display: none;
     }
 }
 
-.button-artistes {
+.button-artists {
     width: 290px;
     min-height: 64px;
     background-color: $font-color-pink2;
@@ -114,7 +114,7 @@
     }
 }
 
-.button-artistes-bg-color-white {
+.button-artists-bg-color-white {
     background-color: $font-color-white;
 
     &.button-animate {
@@ -135,10 +135,9 @@
             animation: dash 8s infinite linear;
         }
     }
-
 }
 
-.button-envoyer {
+.button-send {
     width: 170px;
     height: 67px;
     background-color: $font-color-pink2;
@@ -171,15 +170,14 @@
 
 /*****   BUTTONS - ANIMATION - FLECHE  *****/
 
-.fleche-animate {
+.animate-arrow {
     max-width: 100%;
-    width: 146px;
+    width: 122px;
     max-height: 100%;
-    height: 161px;
-    margin-left: 50%;
+    height: 102px;
+    right: 10px;
     position: fixed;
-    bottom: -60px;
-    transform: translateX(-50%);
+    bottom: -30px;
     cursor: pointer;
     z-index: 999;
 }
@@ -192,7 +190,7 @@
 
 .button-tickets-phone {
 
-    width: 200px;
+    width: 130px;
     color: $font-color-white;
     background-color: $font-color-blue;
     font-family: $font-text;
@@ -206,14 +204,19 @@
         text-underline-offset: 10px;
     }
 
-    @media(min-width: 834px) {
+    @media (max-width: $size-phone) {
+        width: 100px;
+        font-size: 30px;
+    }
+
+    @media(min-width: $size-tablette1) {
         display: none;
     }
 }
 
 /*****   BUTTONS - PANIER  *****/
 
-.button-panier {
+.button-shop {
     min-width: 190px;
     min-height: 52px;
     background-color: $font-color-orange;
@@ -244,6 +247,13 @@
             animation: dash 5s infinite linear;
         }
     }
+}
+
+.button-title-alignment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
 }
 
 /******************************************************************************************/

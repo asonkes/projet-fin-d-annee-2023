@@ -9,46 +9,8 @@
 /*****   TAG MENU AND LOGO   *****/
 /*****   TAG SIZE DEKSTOP   *****/
 /*****   TAG SIZE TABLETTE   *****/
+/*****   TAG SIZE DEBUT MENU BURGER  *****/
 /*****   TAG SIZE PHONE   *****/
-/*****   UTILITY/ BUTTON-TITLE   *****/
-.button-title-alignement {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-}
-
-/*****   UTILITY/ FOOTER (ICONES-PARTENAIRES)   *****/
-.size1 {
-  max-width: 65px;
-  height: 65px;
-}
-
-.size2 {
-  max-width: 100px;
-  height: 65px;
-}
-
-.size3 {
-  max-width: 100px;
-  height: 85px;
-}
-
-.size4 {
-  max-width: 65px;
-  height: 55px;
-}
-
-.size5 {
-  max-width: 100px;
-  height: 35px;
-}
-
-.size6 {
-  max-width: 60px;
-  height: 80px;
-}
-
 /*****BASE*****/
 * {
   margin: 0;
@@ -58,7 +20,7 @@
 
 body {
   height: 100%;
-  padding-top: 176px;
+  padding-top: 130px;
   background-color: #ffffff;
   overflow-x: hidden;
 }
@@ -71,7 +33,7 @@ body {
 .slide {
   max-width: 100%;
   /* Pour permettre de déduire la "height" de "pre_header" et de "header", body commence en-dessous de ces 2 éléments */
-  min-height: calc(100vh - 175px);
+  min-height: calc(100vh - 130px);
   overflow: hidden;
 }
 @media (max-width: 393px) {
@@ -138,17 +100,17 @@ body {
   width: 30px;
 }
 @media (max-width: 393px) {
-  #pre-header ul li#pre-header-alignement {
+  #pre-header ul li#pre-header-alignment {
     margin-left: auto;
   }
 }
-#pre-header .link-3 {
+#pre-header .pre-header-link-shop {
   padding-right: 37px;
 }
-#pre-header .link-5 {
+#pre-header .pre-header-link-search {
   padding-right: 17px;
 }
-#pre-header .link-5:hover {
+#pre-header .pre-header-link-search:hover {
   width: 30px;
 }
 
@@ -165,29 +127,24 @@ header {
 }
 @media (max-width: 833px) {
   header {
-    height: 95px;
+    height: 80px;
     border: none;
   }
 }
 
-.logo {
-  margin: auto;
-}
-@media (max-width: 833px) {
-  .logo {
-    max-width: 95px;
-    margin: 0;
-  }
+.logo-header {
+  margin-top: -50px;
 }
 @media (max-width: 393px) {
-  .logo {
+  .logo-header {
     max-width: 95px;
+    margin: inherit;
   }
 }
 
 /*****   MENU BURGER  *****/
 .burger {
-  width: 60px;
+  width: 42px;
   height: 24px;
   cursor: pointer;
   align-self: center;
@@ -200,7 +157,7 @@ header {
 }
 .burger span {
   width: 100%;
-  height: 10px;
+  height: 4px;
   background-color: #161581;
   border-radius: 12px;
   display: block;
@@ -213,18 +170,19 @@ header {
   content: "";
   position: absolute;
   width: 100%;
-  height: 10px;
+  height: 4px;
   background-color: #161581;
   transition: transform 0.15s ease-in-out;
   /* Transition ease-in-out à un démarrage et une fin lente */
+  border-radius: 15px;
 }
 .burger span::before {
-  transform: translateY(-20px);
-  border-radius: 12px;
+  transform: translateY(-12px);
+  border-radius: 15px;
 }
 .burger span::after {
-  transform: translateY(20px);
-  border-radius: 12px;
+  transform: translateY(12px);
+  border-radius: 15px;
 }
 .burger.active span {
   background-color: transparent;
@@ -240,14 +198,13 @@ header {
 nav {
   top: 50px;
   width: 100%;
-  height: 120px;
+  height: 80px;
 }
 @media (max-width: 833px) {
   nav {
     display: none;
     position: absolute;
     top: 100%;
-    background-color: #161581;
     height: calc(100vh - 145px);
     overflow-y: auto;
     z-index: 15000;
@@ -258,7 +215,7 @@ nav {
 }
 nav ul {
   max-width: 100%;
-  height: 120px;
+  height: 80px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -281,7 +238,7 @@ nav ul {
 }
 nav ul li {
   width: 200px;
-  height: 120px;
+  height: 80px;
   text-align: center;
 }
 @media (max-width: 1450px) {
@@ -305,6 +262,8 @@ nav ul li {
     border: 1px solid #ffffff;
     display: flex;
     justify-content: center;
+    background-color: #161581;
+    height: 100px;
   }
 }
 @media (max-width: 833px) {
@@ -316,7 +275,7 @@ nav ul li {
 nav ul li.active a, nav ul li:hover a {
   width: 100%;
   height: 100%;
-  background-image: url(images/underline.png);
+  background-image: url(images/underline-pink.png);
   background-repeat: no-repeat;
   background-size: 90%;
   transition: all 0.2s;
@@ -328,16 +287,41 @@ nav ul li.active a, nav ul li:hover a {
     height: 100px;
     max-width: 100%;
     height: 100%;
-    background-image: url(images/underline2.png);
+    background-image: url(images/underline-blue.png);
     background-repeat: no-repeat;
-    background-size: 90%;
+    background-size: 12%;
     background-color: #ffffff;
     color: #161581;
   }
 }
+@media (max-width: 670px) {
+  nav ul li.active a, nav ul li:hover a {
+    background-size: 15%;
+  }
+}
+@media (max-width: 570px) {
+  nav ul li.active a, nav ul li:hover a {
+    background-size: 18%;
+  }
+}
+@media (max-width: 470px) {
+  nav ul li.active a, nav ul li:hover a {
+    background-size: 20%;
+  }
+}
+@media (max-width: 400px) {
+  nav ul li.active a, nav ul li:hover a {
+    background-size: 23%;
+  }
+}
+@media (max-width: 350px) {
+  nav ul li.active a, nav ul li:hover a {
+    background-size: 25%;
+  }
+}
 nav ul li a {
   min-width: 200px;
-  line-height: 120px;
+  line-height: 80px;
   color: #D04264;
   font-size: 30px;
   text-decoration: none;
@@ -355,7 +339,7 @@ nav ul li a {
 @media (max-width: 1100px) {
   nav ul li a {
     width: 120px;
-    font-size: 23px;
+    font-size: 25px;
   }
 }
 @media (max-width: 900px) {
@@ -366,7 +350,7 @@ nav ul li a {
 }
 @media (max-width: 833px) {
   nav ul li a {
-    line-height: 75px;
+    line-height: 60px;
     color: #ffffff;
     background-position: center 80%;
   }
@@ -391,17 +375,10 @@ nav ul li a {
     background-position-x: -225px, 400px;
   }
 }
-@media (max-width: 834px) {
+@media (max-width: 850px) {
   #home {
     background-size: 90%, 85%;
     background-position-x: -270px, 250px;
-  }
-}
-@media (max-width: 850px) {
-  #home {
-    height: 100vh;
-    background-size: 100%, 95%;
-    background-position-x: -250px, 50px;
   }
 }
 @media (max-width: 600px) {
@@ -414,14 +391,14 @@ nav ul li a {
   #home {
     background-size: 120%, 130%;
     background-position-x: -150px, -10px;
-    background-position-y: 400px, 10px;
+    background-position-y: 430px, 10px;
   }
 }
 @media (max-width: 380px) {
   #home {
     background-size: 140%, 110%;
     background-position-x: -150px, 10px;
-    background-position-y: 400px, 0px;
+    background-position-y: 460px, 0px;
   }
 }
 
@@ -443,7 +420,7 @@ nav ul li a {
     align-items: start;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 833px) {
   .box {
     align-items: start;
   }
@@ -469,7 +446,7 @@ nav ul li a {
     margin-right: 50px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 393px) {
   .box-text {
     margin-right: 20px;
   }
@@ -507,74 +484,81 @@ nav ul li a {
     margin-right: -10px;
   }
 }
-.box-text .block-under {
+.box-text .title-highlight {
   width: 430px;
   /* Le margin permet de centrer le block h2 */
-  margin: 0 auto;
+  margin: -10px auto;
   background-color: #E8542E;
   transform: rotate(-5deg);
   padding: 15px;
   text-align: center;
+  animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  0% {
+    transform: rotate(2turn);
+  }
 }
 @media (max-width: 850px) {
-  .box-text .block-under {
+  .box-text .title-highlight {
     width: 100%;
     margin-top: -30px;
   }
 }
 @media (max-width: 600px) {
-  .box-text .block-under {
+  .box-text .title-highlight {
     margin-top: -30px;
   }
 }
 @media (max-width: 393px) {
-  .box-text .block-under {
+  .box-text .title-highlight {
     margin-top: -50px;
   }
 }
-.box-text .block-under h2 {
+.box-text .title-highlight h2 {
   font-family: "Kranky", cursive;
   font-size: 60px;
   color: #ffffff;
   font-weight: 100;
 }
 @media (max-width: 850px) {
-  .box-text .block-under h2 {
+  .box-text .title-highlight h2 {
     font-size: 40px;
   }
 }
 
-.text1,
-.text2,
-.text3 {
+.text-home-date,
+.text-home-location,
+.text-home-hour {
   letter-spacing: 0.05em;
   margin-top: 5px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.text1 {
+.text-home-date {
   font-size: 75px;
 }
 @media (max-width: 600px) {
-  .text1 {
+  .text-home-date {
     font-size: 55px;
   }
 }
 
-.text2 {
+.text-home-location {
   font-size: 50px;
 }
 @media (max-width: 600px) {
-  .text2 {
+  .text-home-location {
     font-size: 35px;
   }
 }
 
-.text3 {
-  font-size: 60px;
+.text-home-hour {
+  font-size: 50px;
 }
 @media (max-width: 600px) {
-  .text3 {
+  .text-home-hour {
     font-size: 50px;
   }
 }
@@ -585,7 +569,7 @@ nav ul li a {
   position: relative;
 }
 
-.page-artistes {
+.page-artists {
   display: none;
   background-color: #E0007A;
   top: 0;
@@ -597,18 +581,18 @@ nav ul li a {
   flex-wrap: nowrap;
   z-index: 1000;
 }
-.page-artistes.active {
+.page-artists.active {
   display: flex;
 }
 @media (max-width: 1100px) {
-  .page-artistes {
+  .page-artists {
     flex-direction: column;
     align-items: center;
     padding-top: 70px;
     overflow-y: auto;
   }
 }
-.page-artistes .icone-croix {
+.page-artists .icon-cross {
   top: 20px;
   left: 20px;
   width: 30px;
@@ -617,51 +601,51 @@ nav ul li a {
   z-index: 2001;
   cursor: pointer;
 }
-.page-artistes .block-concerts1 {
+.page-artists .popup-concerts-description-block-parent {
   position: relative;
   width: 35%;
   padding: 60px 30px;
 }
 @media (max-width: 1100px) {
-  .page-artistes .block-concerts1 {
+  .page-artists .popup-concerts-description-block-parent {
     width: 100%;
     padding: 30px;
   }
 }
-.page-artistes .block-concerts1 .text-hour {
+.page-artists .popup-concerts-description-block-parent .popup-concert-text {
   color: #ffffff;
   font-family: "Acme", sans-serif;
   font-size: 24px;
   text-align: center;
   margin-top: 15px;
 }
-.page-artistes .block-concerts1 h3 {
+.page-artists .popup-concerts-description-block-parent h3 {
   color: #ffffff;
   text-align: center;
   font-size: 40px;
   padding: 0;
   margin-bottom: 30px;
 }
-.page-artistes .block-concerts1 p {
+.page-artists .popup-concerts-description-block-parent p {
   font-family: "Acme", sans-serif;
   color: #ffffff;
   font-size: 18px;
   line-height: 28px;
   margin-bottom: 20px;
 }
-.page-artistes .block-concerts2 {
+.page-artists .popup-concerts-video-block-parent {
   background-color: #000;
   display: flex;
   align-items: center;
   width: 65%;
 }
 @media (max-width: 1100px) {
-  .page-artistes .block-concerts2 {
+  .page-artists .popup-concerts-video-block-parent {
     width: 100%;
     order: -1;
   }
 }
-.page-artistes .block-concerts2 .block-concerts2-video {
+.page-artists .popup-concerts-video-block-parent .popup-concert-video {
   width: 100%;
   position: relative;
   padding-bottom: 56.25%;
@@ -669,7 +653,7 @@ nav ul li a {
   height: 0;
   overflow: hidden;
 }
-.page-artistes .block-concerts2 iframe {
+.page-artists .popup-concerts-video-block-parent iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -755,28 +739,29 @@ nav ul li a {
   height: 0;
 }
 
-.bloc-parent-image {
+.block-parent-image {
   text-align: center;
 }
 
 /*****   SPECTACLES   *****/
-#spectacles {
+#shows {
   max-width: 100%;
   min-height: 100vh;
   background-image: url(images/ligne-onde-arc-ciel-abstraite-espace-votre-texte-illustration-vectorielle_460848-103751.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: 90%;
   position: relative;
 }
 @media (max-width: 600px) {
-  #spectacles {
+  #shows {
     background-size: 160%;
     background-attachment: fixed;
   }
 }
 
 /*****   PAIEMENT-PANIER   *****/
-.billeterie {
+.tickets-shop {
   display: none;
   width: 100%;
   height: 100vh;
@@ -786,14 +771,14 @@ nav ul li a {
   left: 0;
   z-index: 10001;
 }
-.billeterie.active {
+.tickets-shop.active {
   display: flex;
 }
 
-.paiement-panier {
+.shop-pay {
   width: 50%;
   min-width: 300px;
-  height: 50%;
+  height: 57%;
   font-family: "Acme", sans-serif;
   top: 50%;
   left: 50%;
@@ -802,40 +787,40 @@ nav ul li a {
   overflow-y: auto;
 }
 @media (max-width: 1350px) {
-  .paiement-panier {
+  .shop-pay {
     width: 60%;
     height: 60%;
   }
 }
 @media (max-width: 1100px) {
-  .paiement-panier {
+  .shop-pay {
     top: 55%;
     width: 70%;
     height: 70%;
   }
 }
 @media (max-width: 950px) {
-  .paiement-panier {
+  .shop-pay {
     top: 60%;
     width: 80%;
     height: 80%;
   }
 }
-@media (max-width: 834px) {
-  .paiement-panier {
+@media (max-width: 850px) {
+  .shop-pay {
     top: 70%;
     width: 90%;
     height: 90%;
   }
 }
 @media (max-width: 750px) {
-  .paiement-panier {
+  .shop-pay {
     top: 50%;
     width: 100%;
     height: 100%;
   }
 }
-.paiement-panier .block-1 {
+.shop-pay .block-ticket-office {
   width: 100%;
   height: 67px;
   background-color: #E0007A;
@@ -843,13 +828,13 @@ nav ul li a {
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-.paiement-panier .block-1 a {
+.shop-pay .block-ticket-office a {
   padding: 15px;
 }
-.paiement-panier .block-1 a img {
+.shop-pay .block-ticket-office a img {
   cursor: pointer;
 }
-.paiement-panier .text-1 {
+.shop-pay .enter-ticket {
   width: 100%;
   font-family: "Acme", sans-serif;
   font-size: 40px;
@@ -857,11 +842,11 @@ nav ul li a {
   background-color: #ffffff;
   padding: 20px;
 }
-.paiement-panier .ticket-alignement {
+.shop-pay .ticket-alignment {
   width: 100%;
   background-color: #ffffff;
 }
-.paiement-panier .ticket-alignement .ticket-alignement-1 {
+.shop-pay .ticket-alignment .ticket-alignment-regular {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -870,12 +855,12 @@ nav ul li a {
   border-bottom: 3px solid #000000;
 }
 @media (max-width: 750px) {
-  .paiement-panier .ticket-alignement .ticket-alignement-1 {
+  .shop-pay .ticket-alignment .ticket-alignment-regular {
     flex-direction: column;
     justify-content: center;
   }
 }
-.paiement-panier .ticket-alignement .ticket-alignement-1-special {
+.shop-pay .ticket-alignment .ticket-alignment-special {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -884,138 +869,133 @@ nav ul li a {
   min-width: 50%;
 }
 @media (max-width: 750px) {
-  .paiement-panier .ticket-alignement .ticket-alignement-1-special {
+  .shop-pay .ticket-alignment .ticket-alignment-special {
     flex-direction: column;
     justify-content: center;
   }
 }
 
-.text-color-blue {
+.description-ticket-office {
   color: #161581;
   font-size: 22px;
   min-width: 50%;
 }
 @media (max-width: 750px) {
-  .text-color-blue {
+  .description-ticket-office {
     min-width: auto;
   }
 }
 @media (max-width: 380px) {
-  .text-color-blue {
+  .description-ticket-office {
     font-size: 20px;
   }
 }
 @media (max-width: 350px) {
-  .text-color-blue {
+  .description-ticket-office {
     font-size: 18px;
   }
 }
 
-.text-color-green {
+.text-price-ticket-office {
   color: #B0C96D;
   font-size: 22px;
   padding-left: 20px;
 }
 @media (max-width: 380px) {
-  .text-color-green {
+  .text-price-ticket-office {
     font-size: 20px;
   }
 }
 @media (max-width: 350px) {
-  .text-color-green {
+  .text-price-ticket-office {
     font-size: 14px;
   }
 }
 
 /*****   ACTIVITES   *****/
-#activites {
+#activities {
   max-width: 100%;
   min-height: 100vh;
   background-image: url(images/note-musique-fond-conception-ligne-vague_460848-129001.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto;
+  background-position: top right;
 }
 @media (max-width: 834px) {
-  #activites {
+  #activities {
     background-position-x: -400px;
     background-size: 170%;
   }
 }
 @media (max-width: 600px) {
-  #activites {
-    background-position-x: -200px;
-    background-size: 170%;
-  }
-}
-@media (max-width: 600px) {
-  #activites {
+  #activities {
     background-position-y: 40px;
     background-size: 165%;
     background-attachment: fixed;
   }
 }
 
-.galerie-activites {
+.activities-gallery {
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.item-activites {
-  max-width: 30%;
-  height: 30%;
+.item-activities {
+  max-width: 26%;
+  height: 26%;
   margin: 20px;
   overflow: hidden;
   flex-shrink: 0;
 }
 @media (max-width: 1450px) {
-  .item-activites {
-    max-width: 40%;
-    height: 40%;
+  .item-activities {
+    max-width: 32%;
+    height: 32%;
   }
 }
-@media (max-width: 834px) {
-  .item-activites {
+@media (max-width: size-dekstop4) {
+  .item-activities {
     max-width: 43%;
     height: 43%;
   }
 }
-@media (max-width: 600px) {
-  .item-activites {
-    max-width: 75%;
-    height: 75%;
+@media (max-width: 750px) {
+  .item-activities {
+    max-width: 70%;
+    height: 70%;
+  }
+}
+@media (max-width: 393px) {
+  .item-activities {
+    max-width: 90%;
+    height: 90%;
   }
 }
 
-.item-activites img {
+.item-activities img {
   width: 100%;
   height: 0;
 }
 
-.activites-texte {
+.activities-text {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.activites-texte p {
+.activities-text p {
   font-family: "Acme", sans-serif;
   font-size: 45px;
   text-align: center;
 }
-@media (max-width: 1350px) {
-  .activites-texte p {
+@media (max-width: 1200px) {
+  .activities-text p {
     font-size: 40px;
   }
 }
 @media (max-width: 834px) {
-  .activites-texte p {
-    margin: 20px;
-    font-size: 40px;
-  }
-}
-@media (max-width: 834px) {
-  .activites-texte p {
+  .activities-text p {
     margin: 20px;
     font-size: 30px;
   }
@@ -1035,7 +1015,7 @@ nav ul li a {
     background-position-x: -200px, 75px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 833px) {
   #about-us {
     background-image: url(images/conception-fond-resume_1265-991.png);
     background-size: cover;
@@ -1072,7 +1052,7 @@ nav ul li a {
     max-width: 57%;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 833px) {
   .about-us-text {
     left: 20%;
     max-width: 65%;
@@ -1082,6 +1062,28 @@ nav ul li a {
   .about-us-text {
     left: 10%;
     max-width: 85.5%;
+  }
+}
+
+.about-us-text-description p {
+  font-size: 22px;
+  letter-spacing: 0.02rem;
+  margin-top: 5px;
+  font-weight: 100;
+}
+@media (max-width: 1100px) {
+  .about-us-text-description p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 834px) {
+  .about-us-text-description p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 600px) {
+  .about-us-text-description p {
+    font-size: 16px;
   }
 }
 
@@ -1097,7 +1099,7 @@ nav ul li a {
   }
 }
 
-.contact-block1 {
+.contact-block-localization-google-map {
   width: 100%;
   position: relative;
   padding-bottom: 56.25%;
@@ -1105,11 +1107,11 @@ nav ul li a {
   overflow: hidden;
 }
 @media (max-width: 834px) {
-  .contact-block1 {
+  .contact-block-localization-google-map {
     height: 0;
   }
 }
-.contact-block1 iframe {
+.contact-block-localization-google-map iframe {
   width: 100% !important;
   height: 100% !important;
   position: absolute;
@@ -1117,7 +1119,7 @@ nav ul li a {
   left: 0;
 }
 
-.contact-block2 {
+.contact-block-form {
   max-width: 100%;
   width: 80%;
   background-image: url(images/note-musique-fond-conception-ligne-vague_460848-12876.png);
@@ -1126,36 +1128,36 @@ nav ul li a {
   background-position: center bottom;
 }
 @media (max-width: 834px) {
-  .contact-block2 {
+  .contact-block-form {
     width: 100%;
     order: -1;
   }
 }
-.contact-block2 h3 {
+.contact-block-form h3 {
   text-align: center;
   margin-bottom: 25px;
 }
 @media (min-width: 834px) {
-  .contact-block2 h3 {
+  .contact-block-form h3 {
     margin-top: 100px;
   }
 }
-.contact-block2 form {
+.contact-block-form form {
   max-width: 100%;
   padding-bottom: 30px;
 }
 @media (max-width: 834px) {
-  .contact-block2 form {
+  .contact-block-form form {
     background-position-y: -40%;
   }
 }
-.contact-block2 form .form-group {
+.contact-block-form form .form-group {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
 }
-.contact-block2 form .form-group input {
+.contact-block-form form .form-group input {
   width: 60%;
   margin-bottom: 25px;
   padding-bottom: 10px;
@@ -1167,10 +1169,10 @@ nav ul li a {
   border-bottom: solid 1px #E0007A;
   outline: none;
 }
-.contact-block2 form .form-group inputfocus {
+.contact-block-form form .form-group inputfocus {
   outline: none;
 }
-.contact-block2 form .form-group textarea {
+.contact-block-form form .form-group textarea {
   width: 60%;
   height: 100px;
   margin-bottom: 25px;
@@ -1184,7 +1186,7 @@ nav ul li a {
   border-bottom: solid 1px #E0007A;
   outline: none;
 }
-.contact-block2 form .form-group .button-tickets {
+.contact-block-form form .form-group .button-tickets {
   margin-top: 20px;
 }
 
@@ -1195,13 +1197,13 @@ footer {
   background-color: #B0C96D;
 }
 
-.icones-partenaires p {
+.partners-icons p {
   font-family: "Acme", sans-serif;
   font-size: 22px;
   padding-top: 15px;
   text-align: center;
 }
-.icones-partenaires ul {
+.partners-icons ul {
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -1211,28 +1213,27 @@ footer {
   border-bottom: solid 1px #000000;
 }
 @media (max-width: 900px) {
-  .icones-partenaires ul {
-    margin: 0 10px;
-  }
-}
-@media (max-width: 900px) {
-  .icones-partenaires ul {
+  .partners-icons ul {
     margin: 20px 5px 0 5px;
     justify-content: center;
   }
 }
-.icones-partenaires ul li {
+.partners-icons ul li {
   max-width: 50%;
   list-style: none;
   margin: 10px;
 }
 @media (max-width: 900px) {
-  .icones-partenaires ul li {
+  .partners-icons ul li {
     margin: 0 5px;
   }
 }
+.partners-icons ul .partners-icons-size {
+  max-height: 65px;
+  width: auto;
+}
 
-.footer2 {
+.post-footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1240,33 +1241,33 @@ footer {
   margin-left: 15px;
 }
 @media (max-width: 393px) {
-  .footer2 {
+  .post-footer {
     flex-direction: row;
     justify-content: space-around;
   }
-  .footer2 #item-3 {
+  .post-footer #item-3 {
     order: -1;
   }
 }
-.footer2 p {
+.post-footer p {
   font-family: "Acme", sans-serif;
   font-size: 18px;
   margin-top: 10px;
 }
 @media (max-width: 393px) {
-  .footer2 p {
+  .post-footer p {
     font-size: 12px;
   }
 }
 
-.icones-liens-sociaux ul {
+.social-links-icons ul {
   display: flex;
   flex-wrap: wrap;
 }
-.icones-liens-sociaux ul li {
+.social-links-icons ul li {
   list-style: none;
 }
-.icones-liens-sociaux ul li img {
+.social-links-icons ul li img {
   width: 30px;
   height: 30px;
   margin: 5px;
@@ -1324,7 +1325,7 @@ footer {
   }
 }
 
-.button-artistes {
+.button-artists {
   width: 290px;
   min-height: 64px;
   background-color: #E0007A;
@@ -1335,10 +1336,10 @@ footer {
   margin-bottom: 60px;
   cursor: pointer;
 }
-.button-artistes.button-animate {
+.button-artists.button-animate {
   transition: border-radius 0.2s ease-in-out;
 }
-.button-artistes.button-animate:hover {
+.button-artists.button-animate:hover {
   border: none;
   border-radius: 0;
   background: linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, #E0007A;
@@ -1347,41 +1348,41 @@ footer {
   animation: dash 8s infinite linear;
 }
 @media (max-width: 1320px) {
-  .button-artistes {
+  .button-artists {
     width: 272px;
     min-height: 60px;
     font-size: 29px;
   }
 }
 @media (max-width: 1170px) {
-  .button-artistes {
+  .button-artists {
     width: 236px;
     min-height: 52px;
     font-size: 24px;
   }
 }
 @media (max-width: 960px) {
-  .button-artistes {
+  .button-artists {
     width: 272px;
     min-height: 60px;
     font-size: 29px;
   }
 }
 @media (min-width: 601px) and (max-width: 800px) {
-  .button-artistes {
+  .button-artists {
     width: 236px;
     min-height: 52px;
     font-size: 24px;
   }
 }
 
-.button-artistes-bg-color-white {
+.button-artists-bg-color-white {
   background-color: #ffffff;
 }
-.button-artistes-bg-color-white.button-animate {
+.button-artists-bg-color-white.button-animate {
   transition: border-radius 0.3s ease-in-out;
 }
-.button-artistes-bg-color-white.button-animate:hover {
+.button-artists-bg-color-white.button-animate:hover {
   border: none;
   border-radius: 0;
   background: linear-gradient(90deg, #E0007A 50%, transparent 0) repeat-x, linear-gradient(90deg, #E0007A 50%, transparent 0) repeat-x, linear-gradient(0deg, #E0007A 50%, transparent 0) repeat-y, linear-gradient(0deg, #E0007A 50%, transparent 0) repeat-y, #ffffff;
@@ -1390,7 +1391,7 @@ footer {
   animation: dash 8s infinite linear;
 }
 
-.button-envoyer {
+.button-send {
   width: 170px;
   height: 67px;
   background-color: #E0007A;
@@ -1401,10 +1402,10 @@ footer {
   margin-top: 10px;
   cursor: pointer;
 }
-.button-envoyer.button-animate {
+.button-send.button-animate {
   transition: border-radius 0.3s ease-in-out;
 }
-.button-envoyer.button-animate:hover {
+.button-send.button-animate:hover {
   border: none;
   border-radius: 0;
   background: linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, #E0007A;
@@ -1414,15 +1415,14 @@ footer {
 }
 
 /*****   BUTTONS - ANIMATION - FLECHE  *****/
-.fleche-animate {
+.animate-arrow {
   max-width: 100%;
-  width: 146px;
+  width: 122px;
   max-height: 100%;
-  height: 161px;
-  margin-left: 50%;
+  height: 102px;
+  right: 10px;
   position: fixed;
-  bottom: -60px;
-  transform: translateX(-50%);
+  bottom: -30px;
   cursor: pointer;
   z-index: 999;
 }
@@ -1433,7 +1433,7 @@ footer {
 
 /*****   BUTTONS - TICKET - NAVBAR  *****/
 .button-tickets-phone {
-  width: 200px;
+  width: 130px;
   color: #ffffff;
   background-color: #161581;
   font-family: "Just Me Again Down Here", cursive;
@@ -1446,6 +1446,12 @@ footer {
   text-decoration: underline dashed #ffffff;
   text-underline-offset: 10px;
 }
+@media (max-width: 393px) {
+  .button-tickets-phone {
+    width: 100px;
+    font-size: 30px;
+  }
+}
 @media (min-width: 834px) {
   .button-tickets-phone {
     display: none;
@@ -1453,7 +1459,7 @@ footer {
 }
 
 /*****   BUTTONS - PANIER  *****/
-.button-panier {
+.button-shop {
   min-width: 190px;
   min-height: 52px;
   background-color: #E8542E;
@@ -1466,16 +1472,23 @@ footer {
   padding-left: 5px;
   padding-right: 5px;
 }
-.button-panier.button-animate {
+.button-shop.button-animate {
   transition: border-radius 0.3s ease-in-out;
 }
-.button-panier.button-animate:hover {
+.button-shop.button-animate:hover {
   border: none;
   border-radius: 0;
   background: linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(90deg, #ffffff 50%, transparent 0) repeat-x, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, linear-gradient(0deg, #ffffff 50%, transparent 0) repeat-y, #E8542E;
   background-size: 20px 4px, 20px 4px, 4px 20px, 4px 20px;
   background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
   animation: dash 5s infinite linear;
+}
+
+.button-title-alignment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
 }
 
 /******************************************************************************************/
@@ -1516,86 +1529,69 @@ h3 {
   display: block;
 }
 
-.about-us-text1 h4 {
+.about-us-text-title-h4-and-h5 h4 {
   margin-top: 150px;
   font-size: 40px;
 }
 @media (max-width: 834px) {
-  .about-us-text1 h4 {
+  .about-us-text-title-h4-and-h5 h4 {
     font-size: 35px;
   }
 }
 @media (max-width: 600px) {
-  .about-us-text1 h4 {
+  .about-us-text-title-h4-and-h5 h4 {
     font-size: 28px;
   }
 }
-.about-us-text1 h5 {
+.about-us-text-title-h4-and-h5 h5 {
   margin-top: 20px;
   font-size: 30px;
 }
 @media (max-width: 1100px) {
-  .about-us-text1 h5 {
+  .about-us-text-title-h4-and-h5 h5 {
     font-size: 27px;
   }
 }
 @media (max-width: 834px) {
-  .about-us-text1 h5 {
+  .about-us-text-title-h4-and-h5 h5 {
     font-size: 24px;
   }
 }
 @media (max-width: 600px) {
-  .about-us-text1 h5 {
+  .about-us-text-title-h4-and-h5 h5 {
     font-size: 22px;
   }
 }
 
-.about-us-text2 h6 {
+.about-us-text-description h6 {
   font-size: 25px;
   letter-spacing: 0.02rem;
   margin-top: 20px;
   margin-bottom: 5px;
-  text-decoration: underline solid 2px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: black;
+  text-decoration-thickness: 2px;
   font-weight: 500;
 }
 @media (max-width: 1100px) {
-  .about-us-text2 h6 {
+  .about-us-text-description h6 {
     font-size: 20px;
   }
 }
 @media (max-width: 834px) {
-  .about-us-text2 h6 {
+  .about-us-text-description h6 {
     font-size: 23px;
   }
 }
 @media (max-width: 750px) {
-  .about-us-text2 h6 {
+  .about-us-text-description h6 {
     font-size: 20px;
   }
 }
 @media (max-width: 600px) {
-  .about-us-text2 h6 {
+  .about-us-text-description h6 {
     font-size: 18px;
-  }
-}
-.about-us-text2 p {
-  font-size: 22px;
-  letter-spacing: 0.02rem;
-  margin-top: 5px;
-}
-@media (max-width: 1100px) {
-  .about-us-text2 p {
-    font-size: 20px;
-  }
-}
-@media (max-width: 834px) {
-  .about-us-text2 p {
-    font-size: 17px;
-  }
-}
-@media (max-width: 600px) {
-  .about-us-text2 p {
-    font-size: 16px;
   }
 }
 

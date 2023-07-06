@@ -5,7 +5,7 @@
     position: relative;
 }
 
-.page-artistes {
+.page-artists {
     display: none;
     background-color: $font-color-pink2;
     top: 0;
@@ -21,14 +21,14 @@
         display: flex;
     }
 
-    @media (max-width: $size-dekstop-mini) {
+    @media (max-width: $size-dekstop3) {
         flex-direction: column;
         align-items: center;
         padding-top: 70px;
         overflow-y: auto;
     }
 
-    .icone-croix {
+    .icon-cross {
         top: 20px;
         left: 20px;
         width: 30px;
@@ -38,17 +38,17 @@
         cursor: pointer;
     }
 
-    .block-concerts1 {
+    .popup-concerts-description-block-parent {
         position: relative;
         width: 35%;
         padding: 60px 30px;
 
-        @media (max-width: $size-dekstop-mini) {
+        @media (max-width: $size-dekstop3) {
             width: 100%;
             padding: 30px;
         }
 
-        .text-hour {
+        .popup-concert-text {
             color: $font-color-white;
             font-family: $font-title;
             font-size: 24px;
@@ -73,18 +73,18 @@
         }
     }
 
-    .block-concerts2 {
+    .popup-concerts-video-block-parent {
         background-color: #000;
         display: flex;
         align-items: center;
         width: 65%;
 
-        @media (max-width: $size-dekstop-mini) {
+        @media (max-width: $size-dekstop3) {
             width: 100%;
             order: -1;
         }
 
-        .block-concerts2-video {
+        .popup-concert-video {
             width: 100%;
             position: relative;
             padding-bottom: 56.25%;
@@ -153,14 +153,14 @@
         margin-left: 0px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: $size-tablette3) {
         width: 300px;
         height: 300px;
         margin-right: 0px;
         margin-left: 0px;
     }
 
-    @media (max-width: $size-phone) {
+    @media (max-width: $size-burger) {
         width: 400px;
         height: 400px;
         margin-right: 0px;
@@ -173,6 +173,6 @@
     height: 0;
 }
 
-.bloc-parent-image {
+.block-parent-image {
     text-align: center;
 }

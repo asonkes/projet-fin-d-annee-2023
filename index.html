@@ -4,19 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sonkes Audrey" />
+    <meta name="copyright" content="Sonkes Audrey" />
+    <meta name="robots" content="index" />
     <meta
       name="description"
-      content="projet de fin d'année sur le thème d'un festival de musique se nommant Lolly POP"
+      content="projet de fin d'année sur le thème d'un festival de musique pour enfants se nommant Lolly POP"
     />
-    <meta property="og:title" content="Lolly POP, Festival de musique pour les enfants" />
     <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lolly POP, Festival de musique pour les enfants" />
     <meta property="og:description" content="Festival de musique sensibilisant principalement les enfants" />
-    <meta property="og:locale" content="fr_FR" />
-    <meta property="og:site_name" content="Lolly POP" />
     <meta property="og:image" content="https://lollypop.audrey-sonkes.be/assets/logo/logo1.png" />
+    <meta property="og:url" content="https://lollypop.audrey-sonkes.be/" />
+    <meta property="og:site_name" content="Lolly POP" />
+    <!--
+    <meta property="website:published_time" content="2023-06-27T22:00:02+1:00"
+    <meta property="website:published_time" content="2023-06-27T22:00:02+1:00"
+    -->
+    <meta property="og:locale" content="fr_FR" />
     <meta property="og:image:width" content="150" />
     <meta property="og:image:height" content="134" />
-    <meta property="og:url" content="https://lollypop.audrey-sonkes.be/" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -40,9 +47,10 @@
       <ul>
         <li><a href="#">FR</a></li>
         <li><a href="#">NL</a></li>
-        <li><a href="#" class="link-3">EN</a></li>
-        <li id="pre-header-alignement">
+        <li><a href="#" class="pre-header-link-shop">EN</a></li>
+        <li id="pre-header-alignment">
           <a href="#">
+            <!-- SVG SHOP IN pre-header -->
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
@@ -51,6 +59,8 @@
               viewBox="0 0 30.000000 30.000000"
               preserveAspectRatio="xMidYMid meet"
             >
+              <title id="shop">Shop</title>
+              <desc id="shopDesc">Shop for the shop office and to count the tickets</desc>
               <g transform="translate(0.000000,30.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                 <path
                   d="M5 270 c-3 -5 3 -11 13 -14 17 -6 78 -153 84 -206 3 -26 5 -26 71
@@ -72,8 +82,9 @@
           </a>
         </li>
         <li>
-          <a href="#" class="link-5"
-            ><svg
+          <a href="#" class="pre-header-link-search">
+            <!-- SVG SEARCH IN pre-header -->
+            <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
               width="20.000000pt"
@@ -81,6 +92,8 @@
               viewBox="0 0 30.000000 30.000000"
               preserveAspectRatio="xMidYMid meet"
             >
+              <title id="searchTitle">SEARCH</title>
+              <desc id="searchDesc">Magnifying glass to search informations in the website</desc>
               <g transform="translate(0.000000,30.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                 <path
                   d="M34 266 c-43 -43 -46 -90 -9 -134 31 -37 73 -48 120 -32 35 11 35 11
@@ -94,10 +107,10 @@
         </li>
       </ul>
     </div>
-    <!--------------------------------------------------------------------------------->
+    <!-- HEADER -->
     <header>
-      <a href="/" class="logo">
-        <img class="img-responsive" src="assets/logo/logo1.png" />
+      <a href="index.html" class="logo-header">
+        <img class="img-responsive" src="assets/logo/logo-header.png" />
       </a>
 
       <button class="button-tickets-phone" type="button">Tickets</button>
@@ -108,22 +121,22 @@
 
       <nav>
         <ul>
-          <li><a class="ancre active" href="#home">Home</a></li>
-          <li><a class="ancre" href="#concerts">Concerts</a></li>
-          <li><a class="ancre" href="#spectacles">Spectacles</a></li>
-          <li><a class="ancre" href="#activites">Activités</a></li>
-          <li><a class="ancre" href="#about-us">About Us</a></li>
-          <li><a class="ancre" href="#contact">Contact</a></li>
+          <li class="active"><a class="anchor" href="#home">Home</a></li>
+          <li><a class="anchor" href="#concerts">Concerts</a></li>
+          <li><a class="anchor" href="#shows">Spectacles</a></li>
+          <li><a class="anchor" href="#activities">Activités</a></li>
+          <li><a class="anchor" href="#about-us">About Us</a></li>
+          <li><a class="anchor" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <!--------------------------------------------------------------------------------->
+    <!-- SLIDE HOME -->
     <div class="slide" id="home">
       <div class="box">
         <div class="box-text">
           <h1>
             <span class="sr-only">Lolly POP</span>
-
+            <!-- SVG H1 IN HOME -->
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
@@ -134,6 +147,8 @@
               fill="#000000"
               stroke="none"
             >
+              <title id="lollyPop">LollyPop</title>
+              <desc id="LollyPopDesc">It's the name of the kids festivals, thus, the name of the projet.</desc>
               <g transform="translate(0.000000,147.000000) scale(0.100000,-0.100000)">
                 <path
                   d="M2466 1039 c-102 -24 -157 -103 -127 -182 33 -85 126 -73 119 16 -2
@@ -189,33 +204,37 @@
               </g>
             </svg>
           </h1>
-          <div class="block-under">
+          <div class="title-highlight">
             <h2>Kids Festivals</h2>
           </div>
-          <div class="text1">
+          <div class="text-home-date">
             <p>5 AOÛT 2023</p>
           </div>
-          <div class="text2">
+          <div class="text-home-location">
             <p>Parc d'Enghien</p>
           </div>
-          <div class="text3">
-            <p>11h à 23h</p>
+          <div class="text-home-hour">
+            <p>10h à 23h30</p>
           </div>
           <button class="button button-tickets button-animate" type="button">Tickets</button>
         </div>
       </div>
     </div>
-    <!--------------------------------------------------------------------------------->
+    <!-- SLIDE CONCERTS -->
     <div class="slide" id="concerts">
-      <div class="button-title-alignement">
+      <div class="button-title-alignment">
         <h3 class="h3-title">Concerts</h3>
         <button class="button button-tickets button-animate button-tickets-hidden" type="button">Tickets</button>
       </div>
 
-      <div class="page-artistes">
-        <a class="icone-croix"><img src="assets/icones/Close-30.png" /></a>
-        <div class="block-concerts1">
-          <p class="text-hour">18h00 - 19h00</p>
+      <!-------------------------- -->
+      <!-- PAGE TYPH BARROW -->
+      <div class="page-artists">
+        <a class="icon-cross"
+          ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+        /></a>
+        <div class="popup-concerts-description-block-parent">
+          <p class="popup-concert-text">11h30 - 13h00</p>
           <h3 class="h3-title">Typh Barrow</h3>
           <div>
             <p>Typh Barrow est une autrice - compositrice - interprète et pianiste Belge.</p>
@@ -228,8 +247,9 @@
             <p>En 2020, son album ALOHA entre directement à la première place de l’Ultratop 200.</p>
           </div>
         </div>
-        <div class="block-concerts2">
-          <div class="block-concerts2-video">
+        <div class="popup-concerts-video-block-parent">
+          <div class="popup-concert-video">
+            <!-- IFRAME VIDEO TYPH BARROW IN CONCERTS-->
             <iframe
               width="560"
               height="315"
@@ -243,150 +263,553 @@
         </div>
       </div>
 
+      <!-------------------------- -->
+      <!-- PAGE CHRISTOPHE MAE -->
+      <div class="page-artists">
+        <a class="icon-cross"
+          ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+        /></a>
+        <div class="popup-concerts-description-block-parent">
+          <p class="popup-concert-text">14h30 - 16h00</p>
+          <h3 class="h3-title">Christophe Maé</h3>
+          <div>
+            <p>Christophe maé est une auteur - compositeur et interprète français.</p>
+            <p>Il fera partie de la comédie musicale "Le Roi Soleil", qui connaîtra un très grand succès.</p>
+            <p>Christophe Maé fait de la pop et de la chanson française.</p>
+            <p>
+              Son premier album a des influences caribéennes, son second album, lui, aura plus des influences africaines et son troisième des
+              influences de la Louisiane et du Nord-Est des États-Unis. On peut retrouver du blues, de la soul et du
+              jazz dans ses prestations publiques.
+            </p>
+          </div>
+        </div>
+        <div class="popup-concerts-video-block-parent">
+          <div class="popup-concert-video">
+            <!-- IFRAME VIDEO CHRISTOPHE MAE IN CONCERTS-->
+            <iframe
+              src="https://player.vimeo.com/video/28203722?h=e88b556776"
+              width="640"
+              height="360"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-------------------------- -->
+      <!-- PAGE ANGELE -->
+      <div class="page-artists">
+        <a class="icon-cross"
+          ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+        /></a>
+        <div class="popup-concerts-description-block-parent">
+          <p class="popup-concert-text">17h30 - 19h00</p>
+          <h3 class="h3-title">Angèle</h3>
+          <div>
+            <p>
+              Angèle est une autrice - compositrice - interprète, musicienne, productrice, actrice et mannequin belge.
+            </p>
+            <p>Son premier single sortira en 2017 et connaîtra un très grand succès.</p>
+            <p>Son deuxième album, lui, sortira en 2021.</p>
+            <p>
+              Angèle commencera sa carrière cinématographique par un doublage, où elle incarne la voix de "Gabby Gabby"
+              dans le film Toy Story 4. En 2023, elle incarnera "Falbala" dans l'adaptation d'Astérix et Obélix :
+              "L'Empire du Milieu".
+            </p>
+          </div>
+        </div>
+        <div class="popup-concerts-video-block-parent">
+          <div class="popup-concert-video">
+            <!-- IFRAME VIDEO ANGELE IN CONCERTS-->
+      <iframe src="https://player.vimeo.com/video/290935145?h=a4d83ebb9b&color=efda00&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-------------------------- -->
+      <!-- PAGE VIANNEY -->
+      <div class="page-artists">
+        <a class="icon-cross"
+          ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+        /></a>
+        <div class="popup-concerts-description-block-parent">
+          <p class="popup-concert-text">19h00 - 20h30</p>
+          <h3 class="h3-title">Vianney</h3>
+          <div>
+            <p>Vianney est un auteur - compositeur - interprète et parolier français.</p>
+            <p>
+              Son premier album sortira en 2014 (il est certifié disque de platine) et son second album en 2016 (il est
+              certifié disque de diamant).
+            </p>
+            <p>En 2020, son troisième album voit le jour.</p>
+            <p>
+              Vianney fait ses débuts dans le cinéma en tenant le rôle principal de "Ma mère est folle". En 2021, il
+              intègre le jury de "The Voice" pour la 10ème saison et il fera de même pour la 11ème et 12ème saison.
+            </p>
+          </div>
+        </div>
+        <div class="popup-concerts-video-block-parent">
+          <div class="popup-concert-video">
+            <!-- IFRAME VIDEO VIANNEY IN CONCERTS-->
+            <iframe
+              src="https://player.vimeo.com/video/223880755?h=9459b2377a"
+              width="640"
+              height="360"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-------------------------- -->
+      <!-- PAGE LOUANE -->
+      <div class="page-artists">
+        <a class="icon-cross"
+          ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+        /></a>
+        <div class="popup-concerts-description-block-parent">
+          <p class="popup-concert-text">20h30 - 22h00</p>
+          <h3 class="h3-title">Louane</h3>
+          <div>
+            <p>Louane est une chanteuse - miusicienne et actrice française.</p>
+            <p>
+              Son premier album sortira en 2015, ("chambre 12"), celui-ci restera au sommet des ventes durant 12 semaines non-consécutives.
+            </p>
+            <p>En 2017, sortira le premier single de son deuxième album.</p>
+            <p>
+              En 2020, son troisième album sortira et en 2022, se sera son quatrième album.
+              Au niveau cinéma, elle participera à plusieurs films.
+              En 2022, elle sera coach de "The Voice Kids" pour la saison 8.
+            </p>
+          </div>
+        </div>
+        <div class="popup-concerts-video-block-parent">
+          <div class="popup-concert-video">
+            <!-- IFRAME VIDEO LOUANE IN CONCERTS-->
+            <iframe src="https://player.vimeo.com/video/250421525?h=d5775551d1&color=0f9694&title=0&byline=0&portrait=0" 
+            width="640" 
+            height="360" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-------------------------- -->
+      <!-- PAGE CHRISTOPHE DE MAERE -->
+      <div class="page-artists">
+        <a class="icon-cross"
+          ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+        /></a>
+        <div class="popup-concerts-description-block-parent">
+          <p class="popup-concert-text">22h00 - 23h30</p>
+          <h3 class="h3-title">Christophe de Maere</h3>
+          <div>
+            <p>
+              Christophe de Maere est un chanteur belge.
+            </p>
+            <p>
+              Le 18 novembre 2022, Christophe de Maere remportait le titre de la révélation belge de l'année.
+            </p>
+            <p>
+              Consécration pour ce jeune chanteur âgé seulement de 21ans et qui est déjà comparé à Lady Gaga ou à Stromae.
+            </p>
+            <p>
+              Son 1er album sortira le 27 novembre 2023 et connaîtra un succès fou.
+            </p>
+          </div>
+        </div>
+        <div class="popup-concerts-video-block-parent">
+          <div class="popup-concert-video">
+            <!-- IFRAME VIDEO CHRISTOPHE DE MAERE IN CONCERTS-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7Hn7I847rVE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div class="wrapper galerie">
-        <div class="bloc-parent-image">
-          <img class="item" src="assets/images-artistes/1.png" />
-          <div class="bloc-parent-image">
-            <button class="button button-artistes button-animate" type="button">Typh Barrow</button>
+        <div class="block-parent-image">
+          <img
+            class="item"
+            src="assets/images-artistes/typh-barrow.png"
+            alt="portrait de Typh Barrow avec la tête inclinée vers la droite"
+          />
+          <div class="block-parent-image">
+            <button class="button button-artists button-animate" type="button">Typh Barrow</button>
           </div>
         </div>
-        <div class="bloc-parent-image">
-          <img class="item" src="assets/images-artistes/2.png" />
-          <div class="bloc-parent-image">
-            <button class="button button-artistes button-animate" type="button">Christophe Maé</button>
+        <div class="block-parent-image">
+          <img
+            class="item"
+            src="assets/images-artistes/christophe-mae.png"
+            alt="portrait de christophe Maé avec les yeux regardant vers la droite"
+          />
+          <div class="block-parent-image">
+            <button class="button button-artists button-animate" type="button">Christophe Maé</button>
           </div>
         </div>
-        <div class="bloc-parent-image">
-          <img class="item" src="assets/images-artistes/3.png" />
+        <div class="block-parent-image">
+          <img class="item" src="assets/images-artistes/angele.png" alt="portrait d'Angèle souriante" />
           <div class="bloc-parent-image">
-            <button class="button button-artistes button-animate" type="button">Angèle</button>
+            <button class="button button-artists button-animate" type="button">Angèle</button>
           </div>
         </div>
-        <div class="bloc-parent-image">
-          <img class="item" src="assets/images-artistes/4.png" />
+        <div class="block-parent-image">
+          <img class="item" src="assets/images-artistes/vianney.png" alt="portrait de Vianney souriant" />
           <div class="bloc-parent-image">
-            <button class="button button-artistes button-animate" type="button">Vianney</button>
+            <button class="button button-artists button-animate" type="button">Vianney</button>
           </div>
         </div>
-        <div class="bloc-parent-image">
-          <img class="item" src="assets/images-artistes/5.png" />
+        <div class="block-parent-image">
+          <img class="item" src="assets/images-artistes/louane.png" alt="portrait de Louane souriante" />
           <div class="bloc-parent-image">
-            <button class="button button-artistes button-animate" type="button">Louane</button>
+            <button class="button button-artists button-animate" type="button">Louane</button>
           </div>
         </div>
-        <div class="bloc-parent-image">
-          <img class="item" src="assets/images-artistes/6.png" />
-          <div class="bloc-parent-image">
-            <button class="button button-artistes button-animate" type="button">Christophe de Maere</button>
+        <div class="block-parent-image">
+          <img
+            class="item"
+            src="assets/images-artistes/christophe-de-maere.png"
+            alt="portrait de Christophe de Maere non-souriant"
+          />
+          <div class="block-parent-image">
+            <button class="button button-artists button-animate" type="button">Christophe de Maere</button>
           </div>
         </div>
       </div>
     </div>
-    <!--------------------------------------------------------------------------------->
-    <div class="slide" id="spectacles">
-      <div class="button-title-alignement">
+    <!-- SLIDE SPECTACLES -->
+    <div class="slide" id="shows">
+      <div class="button-title-alignment">
         <h3 class="h3-title-pink">Spectacles</h3>
         <button class="button button-tickets button-animate button-tickets-hidden" type="button">Tickets</button>
       </div>
 
-      <div class="billeterie">
-        <div class="paiement-panier">
-          <div class="block-1">
-            <a id="icone-croix2"><img src="assets/icones/Close-30.png" /></a>
-            <a><img src="assets/icones/Shopping-Cart-01-40.png" /></a>
+      <!-- BILLETERIE // TICKETS -->
+      <div class="tickets-shop">
+        <div class="shop-pay">
+          <div class="block-ticket-office">
+            <a id="icon-cross-shop"
+              ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour ferner la page"
+            /></a>
+            <a><img src="assets/icones/Shopping-Cart-01-40.png" alt="icone représentant un panier" /></a>
           </div>
-          <div class="text-1">Tickets d'entrée</div>
-          <div class="ticket-alignement">
-            <div class="ticket-alignement-1">
-              <p class="text-color-blue">Tickets d'entrée adulte</p>
-              <p class="text-color-green alignement-left">57.50€</p>
-              <button class="button button-panier button-animate" type="button">Ajouter au panier</button>
+          <div class="enter-ticket">Tickets d'entrée</div>
+          <div class="ticket-alignment">
+            <div class="ticket-alignment-regular">
+              <p class="description-ticket-office">Tickets d'entrée adulte</p>
+              <p class="text-price-ticket-office alignment-left">57.50€</p>
+              <button class="button button-shop button-animate" type="button">Ajouter au panier</button>
             </div>
-            <div class="ticket-alignement-1">
-              <p class="text-color-blue">Ticket d’entrée Etudiant (de 16 à 24 ans)</p>
-              <p class="text-color-green">47.50€</p>
-              <button class="button button-panier button-animate" type="button">Ajouter au panier</button>
+            <div class="ticket-alignment-regular">
+              <p class="description-ticket-office">Ticket d’entrée Etudiant (de 16 à 24 ans)</p>
+              <p class="text-price-ticket-office">47.50€</p>
+              <button class="button button-shop button-animate" type="button">Ajouter au panier</button>
             </div>
-            <div class="ticket-alignement-1">
-              <p class="text-color-blue">Ticket d’entrée Enfant (de 3 à 16 ans)</p>
-              <p class="text-color-green">26.50€</p>
-              <button class="button button-panier button-animate" type="button">Ajouter au panier</button>
+            <div class="ticket-alignment-regular">
+              <p class="description-ticket-office">Ticket d’entrée Enfant (de 3 à 16 ans)</p>
+              <p class="text-price-ticket-office">26.50€</p>
+              <button class="button button-shop button-animate" type="button">Ajouter au panier</button>
             </div>
-            <div class="ticket-alignement-1-special">
-              <p class="text-color-blue">Ticket d’entrée Bébé</p>
-              <p class="text-color-green alignement-left">0.00€</p>
-              <button class="button button-panier button-animate" type="button">Ajouter au panier</button>
+            <div class="ticket-alignment-special">
+              <p class="description-ticket-office">Ticket d’entrée Bébé</p>
+              <p class="text-price-ticket-office alignment-left">0.00€</p>
+              <button class="button button-shop button-animate" type="button">Ajouter au panier</button>
             </div>
           </div>
         </div>
       </div>
 
+ <!-- PARTIE POP-UP ARTISTES SPECTACLES -->
+      <!-- PAGE BISCOTTE ET BRIOCHE -->
+      <div class="page-artists">
+        <a class="icon-cross"
+          ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+        /></a>
+        <div class="popup-concerts-description-block-parent">
+          <p class="popup-concert-text">10h00 - 10h45</p>
+          <h3 class="h3-title">Biscotte et Brioche</h3>
+          <div>
+            <p>Un frère et une soeur qui proposent des spectacles pour les tout petis, dés 3 ans.</p>
+            <p>L’accordéon de Brioche finit d’envelopper la voix de Biscotte de mélodies, d’airs et d’envies.</p>
+            <p>
+              Parfois accompagné de quelques petits instruments, ses sonorités chromatiques sont un peu comme « Denise la cerise » sur la pièce montée de ce spectacle.
+            </p>
+          </div>
+        </div>
+        <div class="popup-concerts-video-block-parent">
+          <div class="popup-concert-video">
+            <!-- IFRAME VIDEO BISCOTTE ET BRIOCHE IN SHOWS-->
+         <iframe width="560" 
+         height="315" 
+         src="https://www.youtube.com/embed/Sy8_1n_iWpI" 
+         title="YouTube video player" 
+         frameborder="0" 
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+         allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE ALDEBERT -->
+      <div class="page-artists">
+        <a class="icon-cross"
+          ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+        /></a>
+        <div class="popup-concerts-description-block-parent">
+          <p class="popup-concert-text">10h45 - 11h30</p>
+          <h3 class="h3-title">Aldebert</h3>
+          <div>
+            <p>Aldebert est un auteur - compositeur et interprète français.</p>
+            <p>Aldebert commence sa carrière en 2003 et est l'auteur aujourd'hui de 8 albums.</p>
+            <p>
+              Là, aussi, cet artiste est essentiellement auteur et compositeur d'albums pour enfants.
+              Qu'ils soient petits ou plus grands.
+            </p>
+          </div>
+        </div>
+        <div class="popup-concerts-video-block-parent">
+          <div class="popup-concert-video">
+            <!-- IFRAME VIDEO ALDEBERT IN SHOWS-->
+            <iframe src="https://player.vimeo.com/video/76611204?h=8437620b1f" 
+            width="640" 
+            height="360" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE LES DEMENAGEURS -->
+      <div class="page-artists">
+        <a class="icon-cross"
+          ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+        /></a>
+        <div class="popup-concerts-description-block-parent">
+          <p class="popup-concert-text">13h00 - 13h45</p>
+          <h3 class="h3-title">Les déménageurs</h3>
+          <div>
+            <p>Les Déménageurs sont constitués de Lili et de ses frères.</p>
+            <p>Le groupe chante pour les touts petits.</p>
+            <p>
+              Ils sont à la tête de six albums. Ils ont une carrière de plus de 10 ans, profitez de leurs derniers spectacles, qui malheureusement s'arrêteront en 2024.
+            </p>
+            <p>On vous attend avec impatience.</p>
+          </div>
+        </div>
+        <div class="popup-concerts-video-block-parent">
+          <div class="popup-concert-video">
+            <!-- IFRAME VIDEO LES DEMENAGEURS IN SHOWS-->
+            <iframe src="https://player.vimeo.com/video/4421317?h=56dbebe0f0&color=ffffff&title=0&byline=0&portrait=0" 
+            width="640" 
+            height="368" 
+            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" 
+            allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+        <!-- PAGE ENTRE DEUX MONDES -->
+        <div class="page-artists">
+          <a class="icon-cross"
+            ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+          /></a>
+          <div class="popup-concerts-description-block-parent">
+            <p class="popup-concert-text">13h45 - 14h30</p>
+            <h3 class="h3-title">Entre deux mondes</h3>
+            <div>
+              <p>Le groupe "Entre deux Mondes" se compose de Sophie et de julien.</p>
+              <p>Un duo magnifique, qui est spécialisé dans de superbes comptines et des fables qui font rire et réfléchir.</p>
+              <p>
+                La complicité de ce binôme ponctue son émerveillement communicatif de questions, d’interactions, de chants partagés… Tant de petites attentions qu’ils adressent aux enfants avec bienveillance.
+              </p>
+              <p>Et c’est alors que, comme par magie, l’alchimie s’opère et qu’avec simplicité́ presque tout devient accessible, même aux plus jeunes !</p>
+            </div>
+          </div>
+          <div class="popup-concerts-video-block-parent">
+            <div class="popup-concert-video">
+              <!-- IFRAME VIDEO ENTRE DEUX MONDES IN SHOWS-->
+              <iframe width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/nGiw0YqC9NA" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE PIC NIC -->
+        <div class="page-artists">
+          <a class="icon-cross"
+            ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+          /></a>
+          <div class="popup-concerts-description-block-parent">
+            <p class="popup-concert-text">16h00 - 16h45</p>
+            <h3 class="h3-title">Pic Nic</h3>
+            <div>
+              <p>Mrs Flower passe chaque jour à la boutique de Mister Daffodil pour acheter un petit bouquet de fleurs.</p>
+              <p>Un jour, celui-ci prend son courage à deux mains et l’invite à un pic-nic, elle lui a confié qu’elle adore ça !</p>
+              <p>
+                Ce spectacle musical inspiré des chefs d’oeuvres tels que Mary Poppins et Singing in the rain sera chanté en français et en anglais. Nous y retrouverons Rachel Ponsonby (chant, piano, clarinette, bugle, saxophone, flûte, penny whistle, danse) et Perry Rose (chant, piano, banjolele, toy piano, bodrhan, tuba baryton, xylophone, danse).
+              </p>
+            </div>
+          </div>
+          <div class="popup-concerts-video-block-parent">
+            <div class="popup-concert-video">
+              <!-- IFRAME VIDEO PIC NIC IN SHOWS-->
+              <iframe width="560" 
+              height="315" src="https://www.youtube.com/embed/AR9Gh7K0b4g" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE ICI BABA -->
+        <div class="page-artists">
+          <a class="icon-cross"
+            ><img src="assets/icones/icon-cross.png" alt="icone représentant une croix pour fermer la page"
+          /></a>
+          <div class="popup-concerts-description-block-parent">
+            <p class="popup-concert-text">16h45 - 17h30</p>
+            <h3 class="h3-title">Ici baba</h3>
+            <div>
+              <p>Ici baba se compose d'un duo féminin et masculin.</p>
+              <p>Un concert jeune public pour toute la famille dès 3 ans.</p>
+              <p>
+                Ici baba a déjà été joué 500 fois en Belgique, France et Suisse.
+              </p>
+              <p>Chansons-jeux, joutes verbales, participation des enfants, découvertes de nombreux instruments, nombreux clins d'oeil aux parents, tout est là pour un chouette moment en famille. 
+              </p>
+            </div>
+          </div>
+          <div class="popup-concerts-video-block-parent">
+            <div class="popup-concert-video">
+              <!-- IFRAME VIDEO ICI BABA IN SHOWS-->
+              <iframe src="https://player.vimeo.com/video/429201947?h=2b3936a1b1" 
+              width="640" 
+              height="360" 
+              frameborder="0" allow="autoplay; fullscreen; picture-in-picture" 
+              allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+      <!-- GALERIE -->
       <div class="wrapper galerie">
         <div>
-          <img class="item" src="assets/images-artistes-enfants/7.png" />
-          <div class="bloc-parent-image">
-            <button class="button-pink button-artistes button-artistes-bg-color-white button-animate" type="button">
+          <img
+            class="item"
+            src="assets/images-artistes-enfants/biscotte-et-brioche.png"
+            alt="portrait du duo Biscotte et Brioche faisant des grimaces."
+          />
+          <div class="block-parent-image">
+            <button class="button-pink button-artists button-artists-bg-color-white button-animate" type="button">
               Biscotte et Brioche
             </button>
           </div>
         </div>
-        <div class="bloc-parent-image">
-          <img class="item" src="assets/images-artistes-enfants/8.png" />
-          <div class="bloc-parent-image">
-            <button class="button-pink button-artistes button-artistes-bg-color-white button-animate" type="button">
+        <div class="block-parent-image">
+          <img
+            class="item"
+            src="assets/images-artistes-enfants/aldebert.png"
+            alt="portrait d'Aldebert souriant avec la tête vers la gauche."
+          />
+          <div class="block-parent-image">
+            <button class="button-pink button-artists button-artists-bg-color-white button-animate" type="button">
               Aldebert
             </button>
           </div>
         </div>
-        <div class="bloc-parent-image">
-          <img class="item" src="assets/images-artistes-enfants/9.png" />
-          <div class="bloc-parent-image">
-            <button class="button-pink button-artistes button-artistes-bg-color-white button-animate" type="button">
+        <div class="block-parent-image">
+          <img
+            class="item"
+            src="assets/images-artistes-enfants/les-demenageurs.png"
+            alt="portait du groupe se nommant les déménageurs."
+          />
+          <div class="block-parent-image">
+            <button class="button-pink button-artists button-artists-bg-color-white button-animate" type="button">
               Les déménageurs
             </button>
           </div>
         </div>
-        <div class="bloc-parent-image">
-          <img class="item" src="assets/images-artistes-enfants/10.png" />
-          <div class="bloc-parent-image">
-            <button class="button-pink button-artistes button-artistes-bg-color-white button-animate" type="button">
+        <div class="block-parent-image">
+          <img
+            class="item"
+            src="assets/images-artistes-enfants/entre-deux-mondes.png"
+            alt="portrait du duo Entre deux Mondes, ce duo est placé dos à dos, ils se trouvent de profil."
+          />
+          <div class="block-parent-image">
+            <button class="button-pink button-artists button-artists-bg-color-white button-animate" type="button">
               Entre deux mondes
             </button>
           </div>
         </div>
-        <div class="bloc-parent-image">
-          <img class="item" src="assets/images-artistes-enfants/11.png" />
-          <div class="bloc-parent-image">
-            <button class="button-pink button-artistes button-artistes-bg-color-white button-animate" type="button">
+        <div class="block-parent-image">
+          <img
+            class="item"
+            src="assets/images-artistes-enfants/pic-nic.png"
+            alt="portrait de Pic Nic, une dame qui fait des contes pour enfants, elle se trouve avec la visage vers la gauche et le bras vers le haut."
+          />
+          <div class="block-parent-image">
+            <button class="button-pink button-artists button-artists-bg-color-white button-animate" type="button">
               Pic Nic
             </button>
           </div>
         </div>
-        <div class="bloc-parent-image">
-          <img class="item" src="assets/images-artistes-enfants/12.png" />
-          <div class="bloc-parent-image">
-            <button class="button-pink button-artistes button-artistes-bg-color-white button-animate" type="button">
+        <div class="block-parent-image">
+          <img
+            class="item"
+            src="assets/images-artistes-enfants/ici-baba.png"
+            alt="portrait du duo Ici Baba, les deux visages se trouvent à côté l'un de l'autre. Le visage de la femme se trouve à gauche et le visage de l'homme se trouve vers la droite."
+          />
+          <div class="block-parent-image">
+            <button class="button-pink button-artists button-artists-bg-color-white button-animate" type="button">
               Ici baba
             </button>
           </div>
         </div>
       </div>
 
-      <div class="fleche-animate">
-        <img class="img-fleche-animate" src="assets/image-fleche/Fleche_3.png" />
+      <div class="animate-arrow">
+        <img
+          class="img-animate-arrow"
+          src="assets/image-fleche/arrow.png"
+          alt="image d'un polygone rose contenant à l'intérieur une flèche de couleur blanche."
+        />
       </div>
     </div>
-    <!--------------------------------------------------------------------------------->
-    <div class="slide" id="activites">
-      <div class="button-title-alignement">
+    <!-- SLIDE ACTIVITES -->
+    <div class="slide" id="activities">
+      <div class="button-title-alignment">
         <h3 class="h3-title-pink">Activités</h3>
         <button class="button button-tickets button-animate button-tickets-hidden" type="button">Tickets</button>
       </div>
-      <div class="wrapper galerie-activites">
-        <img class="item-activites" src="assets/images-activites/1.png" />
-        <img class="item-activites" src="assets/images-activites/2.png" />
+      <div class="wrapper activities-gallery">
+        <img
+          class="item-activities"
+          src="assets/images-activites/clowns.png"
+          alt="image avec un groupe de clowns, ils sont debout, sauf un qui se trouve allongé par terre. "
+        />
+        <img
+          class="item-activities"
+          src="assets/images-activites/clowns-echasses.png"
+          alt="photos de clowns sur échasses, une se trouve devant et deux autres en arrière plan."
+        />
       </div>
-      <div class="activites-texte">
+      <div class="activities-text">
         <p>
           Clowns, fées,<br />
           food-truck,...<br />
@@ -394,18 +817,26 @@
           votre journée!!!
         </p>
       </div>
-      <div class="wrapper galerie-activites">
-        <img class="item-activites" src="assets/images-activites/3.png" />
-        <img class="item-activites" src="assets/images-activites/4.png" />
+      <div class="wrapper activities-gallery">
+        <img
+          class="item-activities"
+          src="assets/images-activites/fees.png"
+          alt="photos d'un groupe se composant de fées, il y a cinq fées et elle sont habillées leurs vêtements sont verts."
+        />
+        <img
+          class="item-activities"
+          src="assets/images-activites/food-truck.png"
+          alt="photo d'un food-truck avec un monsieur se trouvant à gauche."
+        />
       </div>
     </div>
-    <!--------------------------------------------------------------------------------->
+    <!-- SLIDE ABOUT-US -->
     <div class="slide" id="about-us">
       <h3 class="h3-title-pink">About Us</h3>
       <button class="button button-tickets button-animate button-tickets-hidden" type="button">Tickets</button>
 
       <div class="about-us-text">
-        <div class="about-us-text1">
+        <div class="about-us-text-title-h4-and-h5">
           <h4 class="title-h4-and-h5">
             Réduire l'impact écologique du<br />
             FESTIVAL...
@@ -415,7 +846,7 @@
             sensibiliser ses participants...
           </h5>
         </div>
-        <div class="about-us-text2">
+        <div class="about-us-text-description">
           <h6>Gobelets et vaisselle :</h6>
           <p>Réutilisables ou biodégradables. Les détergents en cuisine, sont eux, fait à base de matière végétale.</p>
 
@@ -442,16 +873,16 @@
         </div>
       </div>
     </div>
-    <!--------------------------------------------------------------------------------->
+    <!-- SLIDE CONTACT -->
     <div class="slide" id="contact">
-      <div class="contact-block1" id="item-contact1">
+      <div class="contact-block-localization-google-map">
         <iframe
           src="https://www.google.com/maps/d/embed?mid=1n2GgRuaY5My6GCwmODF9i5G5uBQ9YG4&ehbc=2E312F"
           width="900"
           height="770"
         ></iframe>
       </div>
-      <div class="contact-block2" id="item-contact2">
+      <div class="contact-block-form">
         <h3 class="h3-title-pink">Contact</h3>
         <form action="#" method="POST">
           <div class="form-group">
@@ -467,98 +898,148 @@
             <textarea name="message" id="message" placeholder="Message"></textarea>
           </div>
           <div class="form-group">
-            <button class="button button-envoyer button-animate" type="button">Envoyer</button>
+            <button class="button button-send button-animate" type="button">Envoyer</button>
           </div>
         </form>
       </div>
     </div>
-    <!--------------------------------------------------------------------------------->
+    <!-- SLIDE FOOTER -->
     <footer id="footer">
-      <div class="icones-partenaires">
+      <div class="partners-icons">
         <p>Merci à nos partenaires</p>
         <ul>
           <li>
             <a href="https://www.federation-wallonie-bruxelles.be/"
               ><img
-                class="size1"
-                src="assets/images-liens-partenaires/1200px-Fédération_Wallonie-Bruxelles_logo_2011.svg.png"
+                class="partners-icons-size"
+                src="assets/images-liens-partenaires/logo-federation-wallonie-bruxelles.svg.png"
+                alt="image du logo de la fédération wallonie Bruxelles, constitué de couleur jaune, rouge et bleue."
             /></a>
           </li>
           <li>
             <a href="https://www.enghien-edingen.be/fr">
-              <img class="size1" src="assets/images-liens-partenaires/ccadefa7-7678-4479-b834-052eb5862373.jpeg" />
+              <img
+                class="partners-icons-size"
+                src="assets/images-liens-partenaires/logo-commune-enghien.jpeg"
+                alt="image du logo de la commune d'Enghien, ce logo est sur un fond blanc et avec les armureries de la ville."
+              />
             </a>
           </li>
           <li>
             <a href="https://www.wallonie.be/fr">
-              <img class="size6" src="assets/images-liens-partenaires/wallonie_v_0.png" />
+              <img
+                class="partners-icons-size"
+                src="assets/images-liens-partenaires/logo-wallonie.png"
+                alt="image avec le logo de la wallonie qui est représenté par un cop rouge sur un fond transparent."
+              />
             </a>
           </li>
           <li>
             <a href="https://www.rtbf.be/ouftivi">
-              <img class="size2" src="assets/images-liens-partenaires/LOGO_OUFTIVI_2020_RVB.png" />
+              <img
+                class="partners-icons-size"
+                src="assets/images-liens-partenaires/logo-ouftivi.png"
+                alt="image avec le logo de la chaîne de télévision oufitivi, celui-ci se compose de bleu clair et de rouge."
+              />
             </a>
           </li>
           <li>
             <a href="https://www.rtbf.be/lapremiere">
-              <img class="size3" src="assets/images-liens-partenaires/5a5b8f5b14d8c4188e0b093b.png" />
+              <img
+                class="partners-icons-size"
+                src="assets/images-liens-partenaires/logo-la-premiere.png"
+                alt="image avec le logo de la chaîne d'information, la 1ère, ce logo est bleu foncé avec le texte en blanc."
+              />
             </a>
           </li>
           <li>
             <a href="https://portail.hainaut.be/">
-              <img class="size1" src="assets/images-liens-partenaires/logo-province-hainaut.png" />
+              <img
+                class="partners-icons-size"
+                src="assets/images-liens-partenaires/logo-province-hainaut.png"
+                alt="image du logo de la province du hainaut, celui-ci est de couleur grise sur fond blanc."
+              />
             </a>
           </li>
           <li>
             <a href="https://www.loterie-nationale.be/">
               <img
-                class="size4"
-                src="assets/images-liens-partenaires/Loterie_Nationale-logo-17008030C9-seeklogo.com.png"
+                class="partners-icons-size"
+                src="assets/images-liens-partenaires/logo-la-loterie-nationale.png"
+                alt="image du logo de la loterie nationale, celui-ci est de couleur verte foncée sur fond transparent."
               />
             </a>
           </li>
           <li>
             <a href="https://eshop.letec.be/">
-              <img class="size5" src="assets/images-liens-partenaires/1200px-Transport_en_Commun_logo.svg.png" />
+              <img
+                class="partners-icons-size"
+                src="assets/images-liens-partenaires/logo-tec.png"
+                alt="image du logo de la société de transport de la TEC, ce logo est constitué du texte TEC en rouge avec une ligne jaune."
+              />
             </a>
           </li>
           <li>
             <a href="https://www.mastercard.be/fr-be.html">
-              <img class="size1" src="assets/images-liens-partenaires/Master-Card-256.png" />
+              <img
+                class="partners-icons-size"
+                src="assets/images-liens-partenaires/logo-master-card.png"
+                alt="image du logo da la société bancaire mastercard, ce logo est noir en fond transparent."
+              />
             </a>
           </li>
         </ul>
       </div>
-
-      <div class="footer2">
+      <!-- SLIDE POST-FOOTER -->
+      <div class="post-footer">
         <p id="item-1">Mentions légales Exercice Epse</p>
 
         <p id="item-2">© Sonkes Audrey Copyright 2023</p>
 
-        <div class="icones-liens-sociaux" id="item-3">
+        <div class="social-links-icons" id="item-3">
           <ul>
             <li>
-              <a href="https://www.youtube.com/"><img src="assets/icones-liens-sociaux/YouTube1-256.png" /></a>
+              <a href="https://www.youtube.com/"
+                ><img
+                  src="assets/icones-liens-sociaux/youtube.png"
+                  alt="image avec le logo de youtube, celui-ci est noir avec une fèche blanche au centre."
+              /></a>
             </li>
             <li>
-              <a href="https://twitter.com/"><img src="assets/icones-liens-sociaux/Twitter-Bird-256.png" /></a>
+              <a href="https://twitter.com/"
+                ><img
+                  src="assets/icones-liens-sociaux/twitter.png"
+                  alt="image avec le logo de twitter, celui-ci est représenté par un oiseau."
+              /></a>
             </li>
             <li>
-              <a href="https://open.spotify.com/"><img src="assets/icones-liens-sociaux/Spotify-WF-256.png" /></a>
+              <a href="https://open.spotify.com/"
+                ><img
+                  src="assets/icones-liens-sociaux/spotify.png"
+                  alt="image avec le logo de spotify dessus, celui-ci est rond avec trois lignes courbes dedans."
+              /></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/"><img src="assets/icones-liens-sociaux/Instagram-256.png" /></a>
+              <a href="https://www.instagram.com/"
+                ><img src="assets/icones-liens-sociaux/instagram.png" alt="image avec le logo d'instagram dessus."
+              /></a>
             </li>
             <li>
-              <a href="https://fr-fr.facebook.com/"><img src="assets/icones-liens-sociaux/Facebook-256.png" /></a>
+              <a href="https://fr-fr.facebook.com/"
+                ><img
+                  src="assets/icones-liens-sociaux/facebook.png"
+                  alt="image avec le logo de facebook dessus, ce logo est un carré avec la lettre f à l'intérieur."
+              /></a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
-    <!--------------------------------------------------------------------------------->
+
+    <!-- PARTIE JAVASCRIPT -->
     <script type="text/javascript">
       /********************* JAVASCRIPT POUR MENU BURGER *********************/
+
       const burger = document.querySelector(".burger");
       const nav = document.querySelector("header nav");
       const links = nav.querySelectorAll("a");
@@ -578,41 +1059,88 @@
         });
       });
 
-      /********************* EFFET CROIX PAGE POP UP ARTISTES *********************/
-      const concerts = document.getElementById("concerts");
-      const boutonArtiste = concerts.getElementsByClassName("button-artistes");
-      const pageArtiste = concerts.getElementsByClassName("page-artistes");
-      const iconeCroix = document.getElementsByClassName("icone-croix");
+      /********************* EFFET CROIX PAGE POP UP ARTISTES CONCERTS *********************/
+    const concerts = document.getElementById("concerts");
+    const buttonArtists = concerts.querySelectorAll(".button-artists");
+    console.log("cochon",buttonArtists)
+    const pageArtist = concerts.querySelectorAll(".page-artists");
+    console.log(pageArtist)
+    const iconCross = document.querySelectorAll(".icon-cross");
+    console.log(iconCross)
 
-      //On note [0], car ici, on ne fait qu'un exemple pour le élément...//
-      boutonArtiste[0].addEventListener("click", function () {
-        pageArtiste[0].classList.add("active");
+      buttonArtists.forEach((element, indexElement) => {
+        console.log("coucou",element, indexElement)
+
+        pageArtist.forEach((links, indexLinks) => {
+          console.log("coucou2",links, indexLinks)
+
+        iconCross.forEach((icon) => {
+        icon.addEventListener("click", () => {
+          links.classList.remove("active")
+        })
+      })
+          element.addEventListener("click", () => {
+          if (indexElement === indexLinks) {
+            console.log("coucou3",indexElement, indexLinks)
+          links.classList.add("active");
+          } else {
+            links.classList.remove("active");
+          }
+        });
+        });
       });
 
-      iconeCroix[0].addEventListener("click", function () {
-        pageArtiste[0].classList.remove("active");
-      });
+      /********************* EFFET CROIX PAGE POP UP ARTISTES SPECTACLES *********************/
+      const shows = document.getElementById("shows");
+      const pageArtist1 = shows.querySelectorAll(".page-artists");
+      console.log("salut4",pageArtist1);
+      const buttonArtists1 = shows.querySelectorAll(".button-artists");
+      console.log("salut5",buttonArtists1);
+      const iconCross1 = document.querySelectorAll(".icon-cross");
+      console.log("salut6", iconCross1);
 
+      buttonArtists1.forEach((button, indexButton) => {
+        console.log("coucou",button, indexButton)
+
+        pageArtist1.forEach((page, indexPage) => {
+          console.log("coucou2",page, indexPage)
+
+        iconCross1.forEach((cross) => {
+        cross.addEventListener("click", () => {
+          page.classList.remove("active")
+        })
+      })
+          button.addEventListener("click", () => {
+          if (indexButton === indexPage) {
+            console.log("coucou3",indexButton, indexPage)
+          page.classList.add("active");
+          } else {
+          page.classList.remove("active");
+          }
+        });
+        });
+      });
       /********************* EFFET CROIX PAGE POP UP ARTISTES *********************/
+
       //On récupère tous les boutons tickets//
       const tickets = document.querySelectorAll(".button-tickets,.button-tickets-phone");
       console.log(".button-tickets");
       //On récupère la croix2 pour pouvoir fermer la pop-up des paniers et on utilise getElementById puisqu'on a mis un id//
-      const iconeCroix2 = document.getElementById("icone-croix2");
-      console.log("icone-croix2");
+      const iconCrossShop = document.getElementById("icon-cross-shop");
+      console.log("icon-cross-shop");
 
-      const billeterie = spectacles.querySelector(".billeterie");
-      console.log(billeterie);
+      const ticketsShop = shows.querySelector(".tickets-shop");
+      console.log(ticketsShop);
 
       //Ici, on recherche tous les éléments du tickets, comme plusieurs, on fait un foreach//
       tickets.forEach((elem) => {
         elem.addEventListener("click", () => {
-          billeterie.classList.add("active");
+          ticketsShop.classList.add("active");
         });
       });
 
-      iconeCroix2.addEventListener("click", function () {
-        billeterie.classList.remove("active");
+      iconCrossShop.addEventListener("click", function () {
+        ticketsShop.classList.remove("active");
       });
 
       /********************* MENU SCROLL TO SLIDE *********************/
@@ -640,21 +1168,25 @@
         });
       }
       // On stocke dans une variable (un tableau) tous les éléments avec la classe "ancre".
-      const ancres = document.querySelectorAll(".ancre");
+      const ancres = document.querySelectorAll(".anchor");
 
       // On ajoute un écouteur au click sur le document.
       // Lorsque l'événement au click se produit par l'utilisateur, une fonction est exécutée.
-      ancres.forEach((ancre) => {
-        ancre.addEventListener("click", function (cetteAncre) {
+      ancres.forEach((anchor) => {
+        console.log("anchor = ", anchor);
+
+        anchor.addEventListener("click", function (thisAnchor) {
           // la méthode "preventDefault()" est appelée sur l'objet "cetteAncre" pour empêcher le comportement
           // par défaut du click, par exemple, suivre un lien ou recharger la page.
-          cetteAncre.preventDefault();
+          thisAnchor.preventDefault();
 
+          console.log("thisAnchor", thisAnchor);
           // Si l'élément au click est une ancre et a un href avec une valeur commençant par '#' :
           // On passe sur tous les éléments "slide" stockés dans le tableau "slides" à l'aide d'une boucle "for".
           for (let i = 0; i < slides.length; i++) {
+            console.log("slides[i]", slides[i]);
             // On vérifie si la valeur de l'attribut href de l'élément au click correspond à l'ID d'un des slides.
-            if (cetteAncre.target.attributes.href.value === "#" + slides[i].id) {
+            if (thisAnchor.target.attributes.href.value === "#" + slides[i].id) {
               // Si une correspondance est trouvée, on calcule la position de défilement nécessaire
               // pour faire défiler jusqu'au slide correspondant moins la hauteur du pre-header et du header.
               const scrollPosition = slides[i].offsetTop - preHeader.clientHeight - header.offsetHeight;
@@ -677,9 +1209,37 @@
       });
 
       /********************* BUTTON SCROLL TO NEXT SLIDE *********************/
+      //Ici, on récupère les slides, donc les id //
+      const slides2 = document.querySelectorAll(".slide");
+      console.log("animation", slides2);
+       
+      //Ici, on récupère les ancres, l'emplacement du soulignement //
+      const ancres2 = document.querySelectorAll("anchor");
+      console.log("animation2", ancres2);
+
+      window.addEventListener("scroll", ()=> {
+        if(window.scrollY > 816) {
+          ancres2.classList.remove("active");
+        }
+      })
+
+/*
+      slides2.forEach((element, index) => {
+        console.log("animation2", slides2)
+        element.addEventListener("scroll", () => {
+         
+        })
+      });
+
+      /* 816 pour moi est la valeur de la fin du 1er slide et du début du 2ème slide*/
+      /*if(window.pageYOffset > 816) {
+tonElement.style.display = 'none';
+}*/
+
+      /********************* BUTTON SCROLL TO NEXT SLIDE *********************/
 
       // On stocke dans une variable le premier élément avec la classe "fleche-animate" du document.
-      const arrow = document.querySelector(".fleche-animate");
+      const arrow = document.querySelector(".animate-arrow");
 
       // On ajoute un écouteur au click sur arrow.
       // Lorsque l'événement au click se produit par l'utilisateur, une fonction est exécutée.
@@ -726,7 +1286,6 @@
       });
 
       /********************* BUTTON SCROLL TO NEXT SLIDE VISIBLE OR NOT *********************/
-
       // Ajouter un écouteur d'événements pour détecter le défilement de la page.
       window.addEventListener("scroll", function () {
         // On récupère la position verticale actuelle de la fenêtre.

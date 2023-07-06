@@ -37,19 +37,19 @@
             }
         }
 
-        li#pre-header-alignement {
+        li#pre-header-alignment {
 
-            @media(max-width: 393px) {
+            @media(max-width: $size-phone) {
                 margin-left: auto;
             }
         }
     }
 
-    .link-3 {
+    .pre-header-link-shop {
         padding-right: 37px;
     }
 
-    .link-5 {
+    .pre-header-link-search {
         padding-right: 17px;
 
         &:hover {
@@ -69,40 +69,36 @@ header {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: rgba(255, 255, 255, 0.95);
 
-    @media (max-width: 833px) {
+    @media (max-width: $size-tablette2) {
         height: $menu-height-mobile;
         border: none;
     }
 }
 
-.logo {
-    margin: auto;
+.logo-header {
+    margin-top: -50px;
 
-    @media (max-width: 833px) {
-        max-width: $menu-height-mobile;
-        margin: 0;
-    }
-
-    @media (max-width: 393px) {
-        max-width: $menu-height-mobile;
+    @media (max-width: $size-phone) {
+        max-width: 95px;
+        margin: inherit;
     }
 }
 
 /*****   MENU BURGER  *****/
 .burger {
-    width: 60px;
+    width: 42px;
     height: 24px;
     cursor: pointer;
     align-self: center;
     margin: 0 25px;
 
-    @media (min-width: 834px) {
+    @media (min-width: $size-tablette1) {
         display: none;
     }
 
     span {
         width: 100%;
-        height: 10px;
+        height: 4px;
         background-color: $font-color-blue;
         border-radius: 12px;
         display: block;
@@ -116,20 +112,21 @@ header {
             content: '';
             position: absolute;
             width: 100%;
-            height: 10px;
+            height: 4px;
             background-color: $font-color-blue;
             transition: transform 0.15s ease-in-out;
             /* Transition ease-in-out à un démarrage et une fin lente */
+            border-radius: 15px;
         }
 
         &::before {
-            transform: translateY(-20px);
-            border-radius: 12px;
+            transform: translateY(-12px);
+            border-radius: 15px;
         }
 
         &::after {
-            transform: translateY(20px);
-            border-radius: 12px;
+            transform: translateY(12px);
+            border-radius: 15px;
         }
     }
 
@@ -152,12 +149,11 @@ nav {
     width: 100%;
     height: $menu-height;
 
-    @media (max-width: 833px) {
+    @media (max-width: $size-tablette2) {
         display: none;
 
         position: absolute;
         top: 100%;
-        background-color: $font-color-blue;
         height: calc(100vh - 145px);
         overflow-y: auto;
         z-index: 15000;
@@ -176,11 +172,11 @@ nav {
         justify-content: end;
         align-items: center;
 
-        @media (max-width: $size-dekstop-mini) {
+        @media (max-width: $size-dekstop3) {
             justify-content: center;
         }
 
-        @media (max-width: 833px) {
+        @media (max-width: $size-tablette2) {
             flex-direction: column;
             justify-content: start;
             flex-wrap: nowrap;
@@ -193,30 +189,32 @@ nav {
             height: $menu-height;
             text-align: center;
 
-            @media (max-width: $size-dekstop-big) {
+            @media (max-width: $size-dekstop1) {
                 width: $menu-width-item-big;
             }
 
-            @media (max-width: $size-dekstop-mini) {
+            @media (max-width: $size-dekstop3) {
                 width: 126px;
             }
 
-            @media (max-width: 900px) {
+            @media (max-width: $size-dekstop4) {
                 width: 115px;
             }
 
 
-            @media (max-width: 833px) {
+            @media (max-width: $size-tablette2) {
                 width: 100%;
                 border: 1px solid $font-color-white;
                 display: flex;
                 justify-content: center;
+                background-color: $font-color-blue;
+                height: 100px;
             }
 
             &.active,
             &:hover {
 
-                @media (max-width: 833px) {
+                @media (max-width: $size-tablette2) {
                     background-color: $font-color-white;
                     border: 1px solid $font-color-blue;
                 }
@@ -224,22 +222,42 @@ nav {
                 a {
                     width: 100%;
                     height: 100%;
-                    background-image: url(images/underline.png);
+                    background-image: url(images/underline-pink.png);
                     background-repeat: no-repeat;
                     background-size: 90%;
                     transition: all 0.2s;
 
-                    @media (max-width: 833px) {
+                    @media (max-width: $size-tablette2) {
                         color: $font-color-blue;
                         max-width: 300px;
                         height: 100px;
                         max-width: 100%;
                         height: 100%;
-                        background-image: url(images/underline2.png);
+                        background-image: url(images/underline-blue.png);
                         background-repeat: no-repeat;
-                        background-size: 90%;
+                        background-size: 12%;
                         background-color: $font-color-white;
                         color: $font-color-blue;
+                    }
+
+                    @media (max-width: 670px) {
+                        background-size: 15%;
+                    }
+
+                    @media (max-width: 570px) {
+                        background-size: 18%;
+                    }
+
+                    @media (max-width: 470px) {
+                        background-size: 20%;
+                    }
+
+                    @media (max-width: 400px) {
+                        background-size: 23%;
+                    }
+
+                    @media (max-width: 350px) {
+                        background-size: 25%;
                     }
                 }
             }
@@ -255,22 +273,22 @@ nav {
                 padding: 20px;
                 background-position: center bottom;
 
-                @media (max-width: $size-dekstop-big) {
+                @media (max-width: $size-dekstop1) {
                     width: $menu-width-item-big;
                     font-size: 27px;
                 }
 
-                @media (max-width: $size-dekstop-mini) {
+                @media (max-width: $size-dekstop3) {
                     width: $menu-width-item-mini;
-                    font-size: 23px;
+                    font-size: 25px;
                 }
 
-                @media (max-width: 900px) {
+                @media (max-width: $size-dekstop4) {
                     width: $menu-width-item-mini;
                     font-size: 20px;
                 }
 
-                @media (max-width: 833px) {
+                @media (max-width: $size-tablette2) {
                     line-height: calc($menu-height-mobile - 20px);
                     color: $font-color-white;
                     background-position: center 80%;
